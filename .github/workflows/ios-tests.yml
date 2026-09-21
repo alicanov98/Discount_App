@@ -1,0 +1,31 @@
+name: iOS CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-test:
+    name: Build and Test
+    runs-on: macos-15
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Select Xcode version
+        run: |
+          sudo xcode-select -switch /Applications/Xcode.app
+          xcodebuild -version
+
+      - name: Run tests
+        run: |
+          xcodebuild test \
+            -project Discount.xcodeproj \
+            -scheme Discount \
+            -destination 'platform=iOS Simulator,id=${{ env.IOS_SIMULATOR_ID }}' \
+            -derivedDataPath .build/DerivedData \
+            CODE_SIGNING_ALLOWED=NO
+        env:
+          IOS_SIMULATOR_ID: 8C0164BA-5D6E-4A5F-81B3-563760E67570

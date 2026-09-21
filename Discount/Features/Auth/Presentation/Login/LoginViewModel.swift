@@ -1,0 +1,78 @@
+//
+//  LoginViewModel.swift
+//  Discount
+//
+//  Created by Malik Alijanov on 18.09.26.
+//
+
+import Foundation
+import Observation
+
+
+@MainActor
+@Observable
+final class LoginViewModel {
+     var selectedAccountType: AccountType = .user
+    #if DEBUG
+     var email = "demo@kesf.example"
+     var password = "KesfDemo2026!"
+    #else
+    var email = ""
+    var password = ""
+    #endif
+    private(set) var errorMessage: String?
+    private(set) var isLoading = false
+    
+    private let sessionStore: SessionStore
+    
+    init(sessionStore: SessionStore){
+        self.sessionStore = sessionStore
+    }
+    
+    var isFormValid: Bool {
+        !email.trimmingCharacters(in: .whitespaces).isEmpty &&
+        !password.isEmpty
+    }
+    
+    func login(appState:AppState)async {
+        errorMessage = nil
+         guard validate() else {
+             return
+         }
+         
+        isLoading = true
+         defer { isLoading =  false}
+       
+         do{
+             try await sessionStore.login(
+                email: email.trimmingCharacters(in: .whitespacesAndNewlines),
+                password: password
+             )
+             appState.loginCompleted()
+         }catch {
+             errorMessage = error.localizedDescription
+         }
+  
+       
+    }
+    
+    func validate() -> Bool {
+        let trimmedEmail = email.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        guard !trimmedEmail.isEmpty else {
+            errorMessage = "E-poct daxil edilmelidir."
+            return false
+        }
+        
+        guard trimmedEmail.contains("@") else {
+            errorMessage = "Duzgun e-poct daxil edin."
+            return false
+        }
+        
+        guard password.count >= 6 else {
+            errorMessage = "Sifre en azi 6 simvol olmalidir."
+            return false
+        }
+        return true
+    }
+}
