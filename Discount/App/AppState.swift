@@ -13,10 +13,11 @@ import Observation
 final class AppState {
     var flow: AppFlow
     private let tokenStore: any TokenStore
+    private let sessionStore: SessionStore
     
-    init(tokenStore: any TokenStore) {
+    init(tokenStore: any TokenStore,sessionStore: SessionStore) {
         self.tokenStore = tokenStore
-        
+        self.sessionStore = sessionStore
         
         let hasSeenOnboarding =
         UserDefaults.standard.bool(forKey: "hasSeenOnboarding")
@@ -26,7 +27,12 @@ final class AppState {
         if !hasSeenOnboarding {
             flow = .onboarding
         } else if hasValidSession {
-            flow = .main
+            if sessionStore.currentUser?.role == "" {
+                flow = .main
+            }else {
+                flow = .main
+            }
+            
         }else {
             flow = .authentication
         }

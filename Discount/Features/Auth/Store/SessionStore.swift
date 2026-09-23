@@ -12,11 +12,11 @@ import Observation
 @Observable
 final class SessionStore {
     
-    private(set) var currentUser: User?
+    var currentUser: User?
     private(set) var isAuthenticated: Bool
     
     private let authRepository: any AuthRepositoryProtocol
-    private let tokenStore: any TokenStore
+    let tokenStore: any TokenStore
     
     init(
         authRepository: any AuthRepositoryProtocol,
@@ -42,6 +42,27 @@ extension SessionStore {
         
         currentUser =  response.data.user
         isAuthenticated = true
+    }
+    
+    func refresh() async throws {
+        guard let refreshToken = tokenStore.refreshToken, !refreshToken.isEmpty else {
+            throw NetworkError.refreshTokenNotFound
+        }
+        do {
+            let response: RefreshTokenResponse = try await authRepository.refresh(refreshToken:refreshToken)
+            try tokenStore.saveTokens(accessToken: response.data.accessToken, refreshToken: response.data.refreshToken)
+            
+            isAuthenticated = true
+        }catch {
+            #if DEBUG
+            print("Server error",error.localizedDescription)
+            #endif
+            try? tokenStore.clearTokens()
+                currentUser = nil
+               isAuthenticated = false
+                    throw error
+        }
+        
     }
     
     func logout() async throws {

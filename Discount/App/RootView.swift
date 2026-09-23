@@ -14,6 +14,8 @@ struct RootView: View {
        @Environment(SessionStore.self)
        private var sessionStore
     
+   
+    
     var body: some View {
         Group {
             switch appState.flow {
@@ -34,6 +36,6 @@ struct RootView: View {
     }
 }
 
-#Preview {
-    RootView()
-}
+//#Preview {
+//    RootView()
+//}

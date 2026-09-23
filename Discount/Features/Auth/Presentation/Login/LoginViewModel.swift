@@ -12,9 +12,15 @@ import Observation
 @MainActor
 @Observable
 final class LoginViewModel {
-     var selectedAccountType: AccountType = .user
+    var selectedAccountType: AccountType = .user {
+        didSet {
+            #if DEBUG
+            email = selectedAccountType == .user ? "demo@kesf.example" : "business@kesf.example"
+            #endif
+        }
+    }
     #if DEBUG
-     var email = "demo@kesf.example"
+    var email =  "demo@kesf.example"
      var password = "KesfDemo2026!"
     #else
     var email = ""
@@ -76,3 +82,11 @@ final class LoginViewModel {
         return true
     }
 }
+
+//**Biznes hesabı:**
+//- Email: `business@kesf.example`
+//- Şifrə: `KesfDemo2026!`
+//
+//**Adi istifadəçi hesabı:**
+//- Email: `demo@kesf.example`
+//- Şifrə: `KesfDemo2026!`

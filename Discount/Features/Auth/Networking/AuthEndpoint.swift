@@ -10,6 +10,7 @@ import Foundation
 enum AuthEndpoint {
     case login(LoginRequest)
     case logout
+    case refresh(RefreshTokenRequest)
 }
 
 extension AuthEndpoint: Endpoint {
@@ -19,6 +20,8 @@ extension AuthEndpoint: Endpoint {
             return "auth/login"
         case .logout:
             return "auth/logout"
+        case .refresh:
+            return "auth/refresh"
         }
     }
     
@@ -27,6 +30,8 @@ extension AuthEndpoint: Endpoint {
         case .login:
             return .post
         case .logout:
+            return .post
+        case .refresh:
             return .post
         }
     }
@@ -37,6 +42,8 @@ extension AuthEndpoint: Endpoint {
             return false
         case .logout:
             return true
+        case .refresh:
+            return false
         }
     }
     
@@ -50,6 +57,12 @@ extension AuthEndpoint: Endpoint {
             }
         case .logout:
             return nil
+        case .refresh(let request):
+            do {
+                return try JSONEncoder().encode(request)
+            }catch {
+                throw NetworkError.encodingError(error)
+            }
         }
     }
 }

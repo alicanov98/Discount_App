@@ -10,6 +10,7 @@ import Foundation
 enum NetworkError: LocalizedError {
     case invalidURL
     case invalidResponse
+    case refreshTokenNotFound
 
     case unauthorized(
         code: String?,
@@ -36,7 +37,8 @@ enum NetworkError: LocalizedError {
 
         case .invalidResponse:
             return "Serverdən düzgün cavab alınmadı."
-
+        case .refreshTokenNotFound:
+            return "Refresh token tapilmadi"
         case .unauthorized(let code, let message, _):
             if code == "INVALID_CREDENTIALS" {
                 return "E-poçt və ya şifrə yanlışdır."

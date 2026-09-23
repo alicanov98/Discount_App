@@ -7,6 +7,20 @@
 
 import Foundation
 
+protocol AuthRepositoryProtocol {
+
+    func login(
+        email: String,
+        password: String
+    ) async throws -> LoginResponse
+    
+    func logout() async throws
+    
+    func refresh(
+           refreshToken: String
+       ) async throws -> RefreshTokenResponse
+}
+
 final class AuthRepository: AuthRepositoryProtocol {
     private let networkService: any NetworkServiceProtocol
     
@@ -26,6 +40,19 @@ final class AuthRepository: AuthRepositoryProtocol {
         return try await networkService.request(
             AuthEndpoint.login(request),
             responseType: LoginResponse.self
+        )
+    }
+    
+    func refresh(
+        refreshToken: String
+    ) async throws -> RefreshTokenResponse {
+        let request = RefreshTokenRequest(
+            refreshToken: refreshToken
+        )
+
+        return try await networkService.request(
+            AuthEndpoint.refresh(request),
+            responseType: RefreshTokenResponse.self
         )
     }
     

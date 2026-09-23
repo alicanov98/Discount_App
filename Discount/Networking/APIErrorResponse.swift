@@ -15,10 +15,17 @@ struct APIErrorDetail: Decodable {
     let code: String
     let message: String
     let requestID: String?
+    let details: [APIFieldError]?
 
     enum CodingKeys: String, CodingKey {
         case code
         case message
         case requestID = "request_id"
+        case details
     }
+}
+
+struct APIFieldError: Decodable {
+    let field: String
+    let message: String
 }

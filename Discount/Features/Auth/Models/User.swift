@@ -38,3 +38,43 @@ struct User: Codable, Identifiable, Equatable {
         case updatedAt = "updated_at"
     }
 }
+
+
+#if DEBUG
+extension User {
+    static let mock = User(
+        id: 1,
+        name: "Malik Alijanov",
+        email: "malik@example.com",
+        role: "user",
+        interests: [
+            "Restoran",
+            "Texnologiya",
+            "Geyim"
+        ],
+        latitude: 40.4093,
+        longitude: 49.8671,
+        notifyNearby: true,
+        notifyInterests: true,
+        notifyFavorites: false,
+        notificationRadius: 5,
+        createdAt: "2026-09-18T10:00:00Z",
+        updatedAt: "2026-09-21T10:00:00Z"
+    )
+    static let mockBusiness = User(
+           id: 2,
+           name: "Coffee House",
+           email: "business@example.com",
+           role: "business",
+           interests: [],
+           latitude: 40.4093,
+           longitude: 49.8671,
+           notifyNearby: true,
+           notifyInterests: false,
+           notifyFavorites: true,
+           notificationRadius: 10,
+           createdAt: "2026-09-18T10:00:00Z",
+           updatedAt: "2026-09-21T10:00:00Z"
+       )
+}
+#endif

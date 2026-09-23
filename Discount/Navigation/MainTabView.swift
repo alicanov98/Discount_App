@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct MainTabView: View {
+    
+    @Environment(AppContainer.self) private var container
+
+    
     var body: some View {
         TabView {
-        HomeView()
+        HomeView(viewModel: container.makeHomeViewModel())
           .tabItem {
                 Label("Ana səhifə", systemImage: "house")
            }
@@ -30,6 +34,6 @@ struct MainTabView: View {
     }
 }
 
-#Preview {
-    MainTabView()
-}
+//#Preview {
+//    MainTabView()
+//}

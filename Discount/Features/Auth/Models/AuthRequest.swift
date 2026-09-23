@@ -9,3 +9,11 @@ struct LoginRequest: Encodable {
     let email: String
     let password: String
 }
+
+struct RefreshTokenRequest: Encodable {
+    let refreshToken: String
+
+    enum CodingKeys: String, CodingKey {
+        case refreshToken = "refresh_token"
+    }
+}

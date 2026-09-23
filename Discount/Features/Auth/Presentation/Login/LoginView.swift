@@ -90,6 +90,6 @@ struct LoginView: View {
         sessionStore: sessionStore
     )
     .environment(
-        AppState(tokenStore: tokenStore)
+        AppState(tokenStore: tokenStore,sessionStore: sessionStore)
     )
 }
