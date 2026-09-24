@@ -17,3 +17,10 @@ struct RefreshTokenRequest: Encodable {
         case refreshToken = "refresh_token"
     }
 }
+
+struct RegisterRequest: Encodable {
+    let name: String
+    let email: String
+    let password: String
+    let role: String
+}

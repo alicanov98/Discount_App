@@ -14,8 +14,13 @@ protocol AuthRepositoryProtocol {
         password: String
     ) async throws -> LoginResponse
     
-    func logout() async throws
+    func register(name:String,
+                  email:String,
+                  password:String,
+                  role:String) async throws -> RegisterResponse
     
+    func logout() async throws
+   
     func refresh(
            refreshToken: String
        ) async throws -> RefreshTokenResponse
@@ -41,6 +46,17 @@ final class AuthRepository: AuthRepositoryProtocol {
             AuthEndpoint.login(request),
             responseType: LoginResponse.self
         )
+    }
+    
+    func register(
+        name:String,
+        email:String,
+        password:String,
+        role:String
+    ) async throws -> RegisterResponse {
+        let request = RegisterRequest(name: name, email: email, password: password, role: role)
+        
+        return try await networkService.request(AuthEndpoint.register(request), responseType: RegisterResponse.self)
     }
     
     func refresh(

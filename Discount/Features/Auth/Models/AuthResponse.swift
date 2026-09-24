@@ -28,6 +28,18 @@ struct LoginResponse: Decodable {
 
 }
 
+struct RegisterResponse: Decodable {
+    let data: RegisterData
+}
+
+struct RegisterData: Decodable {
+    let user: User
+    let accessToken: String
+    let refreshToken: String
+    let tokenType: String
+    let expiresIn: Int
+    let refreshExpiresAt: String
+}
 
 struct RefreshTokenResponse: Decodable {
     let data: RefreshTokenData

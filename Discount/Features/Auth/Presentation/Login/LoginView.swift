@@ -11,6 +11,7 @@ import SwiftUI
 
 struct LoginView: View {
     @Environment(AppState.self) private var appState
+    @Environment(AppContainer.self) private var appContainer
     @State private var viewModel: LoginViewModel
     
     init(sessionStore:SessionStore) {
@@ -23,44 +24,45 @@ struct LoginView: View {
         @Bindable var viewModel = viewModel
         
         NavigationStack {
-            VStack(spacing:16) {
-                Text("\(viewModel.selectedAccountType.rawValue) hesabı")
-                    .font(.title)
-                    .fontWeight(.semibold)
-                
-                Picker ("Hesab növü",selection: $viewModel.selectedAccountType) {
-                    ForEach(AccountType.allCases) { type in
-                        Text(type.rawValue)
-                            .tag(type)
+            ScrollView {
+                VStack(spacing:16) {
+                    Text("\(viewModel.selectedAccountType.rawValue) hesabı")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                    
+                    Picker ("Hesab növü",selection: $viewModel.selectedAccountType) {
+                        ForEach(AccountType.allCases) { type in
+                            Text(type.rawValue)
+                                .tag(type)
+                        }
                     }
-                }
-                .pickerStyle(.segmented)
-                InputField(title: "E-poct", placeholder: "Email daxil edin", type: .email,text: $viewModel.email,errorMessage: viewModel.errorMessage)
-                InputField(title: "Password", placeholder: "Password", type: .password,text: $viewModel.password, errorMessage: viewModel.errorMessage)
-                HStack {
-                    Spacer()
+                    .pickerStyle(.segmented)
+                    InputField(title: "E-poct", placeholder: "Email daxil edin", type: .email,text: $viewModel.email,errorMessage: viewModel.errorMessage)
+                    InputField(title: "Password", placeholder: "Password", type: .password,text: $viewModel.password, errorMessage: viewModel.errorMessage)
+                    HStack {
+                        Spacer()
                         NavigationLink{
                             ForgotPasswordView()
                         }label: {
                             Text("Şifrəni unutdum")
                         }
-                }
-                PrimaryButton(
-                    title:"Daxil ol",
-                    borderColor: .black) {
-                        Task{
-                           await viewModel.login(appState: appState)
+                    }
+                    PrimaryButton(
+                        title:"Daxil ol",
+                        borderColor: .black) {
+                            Task{
+                                await viewModel.login(appState: appState)
+                            }
+                        }
+                    HStack(spacing:3){
+                        Text("Hesabın yoxdur?")
+                        NavigationLink{
+                            RegisterView(userRole: viewModel.selectedAccountType.rawValue,sessionStore: appContainer.sessionStore)
+                        }label: {
+                            Text("Qeydiyyatdan keç")
                         }
                     }
-                HStack(spacing:3){
-                    Text("Hesabın yoxdur?")
-                    NavigationLink{
-                        RegisterView()
-                    }label: {
-                        Text("Qeydiyyatdan keç")
-                    }
                 }
-               
             }
             .padding()
             .navigationTitle("Giris")

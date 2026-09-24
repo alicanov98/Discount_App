@@ -11,6 +11,7 @@ enum AuthEndpoint {
     case login(LoginRequest)
     case logout
     case refresh(RefreshTokenRequest)
+    case register(RegisterRequest)
 }
 
 extension AuthEndpoint: Endpoint {
@@ -22,6 +23,8 @@ extension AuthEndpoint: Endpoint {
             return "auth/logout"
         case .refresh:
             return "auth/refresh"
+        case .register:
+            return "auth/register"
         }
     }
     
@@ -33,6 +36,8 @@ extension AuthEndpoint: Endpoint {
             return .post
         case .refresh:
             return .post
+        case .register:
+            return .post
         }
     }
     
@@ -43,6 +48,8 @@ extension AuthEndpoint: Endpoint {
         case .logout:
             return true
         case .refresh:
+            return false
+        case .register:
             return false
         }
     }
@@ -58,6 +65,12 @@ extension AuthEndpoint: Endpoint {
         case .logout:
             return nil
         case .refresh(let request):
+            do {
+                return try JSONEncoder().encode(request)
+            }catch {
+                throw NetworkError.encodingError(error)
+            }
+        case .register(let request):
             do {
                 return try JSONEncoder().encode(request)
             }catch {

@@ -29,12 +29,17 @@
 		F45F4E98305ADE74000FD38F /* DiscountUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiscountUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		F45F4E81305ADE73000FD38F /* Discount */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Discount;
-			sourceTree = "<group>";
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F456DF5230655074002338C4 /* Exceptions for "Discount" folder in "Discount" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = F45F4E7E305ADE73000FD38F /* Discount */;
 		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
 		F45F4E91305ADE74000FD38F /* DiscountTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = DiscountTests;
@@ -43,6 +48,14 @@
 		F45F4E9B305ADE74000FD38F /* DiscountUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = DiscountUITests;
+			sourceTree = "<group>";
+		};
+		F47A8EE53064550C00C68D10 /* Discount */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F456DF5230655074002338C4 /* Exceptions for "Discount" folder in "Discount" target */,
+			);
+			path = Discount;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,7 +88,7 @@
 		F45F4E76305ADE73000FD38F = {
 			isa = PBXGroup;
 			children = (
-				F45F4E81305ADE73000FD38F /* Discount */,
+				F47A8EE53064550C00C68D10 /* Discount */,
 				F45F4E91305ADE74000FD38F /* DiscountTests */,
 				F45F4E9B305ADE74000FD38F /* DiscountUITests */,
 				F45F4E80305ADE73000FD38F /* Products */,
@@ -108,7 +121,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				F45F4E81305ADE73000FD38F /* Discount */,
+				F47A8EE53064550C00C68D10 /* Discount */,
 			);
 			name = Discount;
 			packageProductDependencies = (
@@ -400,6 +413,7 @@
 				DEVELOPMENT_TEAM = 6G4U8RP5X6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Discount/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -432,6 +446,7 @@
 				DEVELOPMENT_TEAM = 6G4U8RP5X6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Discount/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -44,6 +44,21 @@ extension SessionStore {
         isAuthenticated = true
     }
     
+    func register(
+        name:String,
+        email:String,
+        password:String,
+        role:String
+    ) async throws {
+        let response = try await authRepository.register(name: name, email: email, password: password, role: role)
+        
+        try tokenStore.saveTokens(accessToken: response.data.accessToken, refreshToken: response.data.refreshToken)
+        
+        currentUser = response.data.user
+        isAuthenticated = true
+        
+    }
+    
     func refresh() async throws {
         guard let refreshToken = tokenStore.refreshToken, !refreshToken.isEmpty else {
             throw NetworkError.refreshTokenNotFound

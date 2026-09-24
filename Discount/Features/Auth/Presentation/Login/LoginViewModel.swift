@@ -21,7 +21,7 @@ final class LoginViewModel {
     }
     #if DEBUG
     var email =  "demo@kesf.example"
-     var password = "KesfDemo2026!"
+    var password = "KesfDemo2026!"
     #else
     var email = ""
     var password = ""
@@ -42,7 +42,9 @@ final class LoginViewModel {
     
     func login(appState:AppState)async {
         errorMessage = nil
-         guard validate() else {
+        let validation = validate(email: email, password: password)
+        guard validation.isValid else {
+            errorMessage = validation.message
              return
          }
          
@@ -62,25 +64,7 @@ final class LoginViewModel {
        
     }
     
-    func validate() -> Bool {
-        let trimmedEmail = email.trimmingCharacters(in: .whitespacesAndNewlines)
-        
-        guard !trimmedEmail.isEmpty else {
-            errorMessage = "E-poct daxil edilmelidir."
-            return false
-        }
-        
-        guard trimmedEmail.contains("@") else {
-            errorMessage = "Duzgun e-poct daxil edin."
-            return false
-        }
-        
-        guard password.count >= 6 else {
-            errorMessage = "Sifre en azi 6 simvol olmalidir."
-            return false
-        }
-        return true
-    }
+  
 }
 
 //**Biznes hesabı:**
