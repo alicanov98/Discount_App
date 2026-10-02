@@ -13,54 +13,54 @@ struct InputField: View {
     let placeholder:String
     let type: InputFieldType
     let icon: String?
-    
+
     @Binding var text: String
     var errorMessage: String?
     @State private var isPasswordVisible = false
-    
+
     init(title: String,placeholder: String, type: InputFieldType = .text, icon: String? = nil, text: Binding<String>, errorMessage: String? = nil) {
         self.title = title
         self.placeholder = placeholder
         self.type = type
         self.icon = icon
-        self._text = text
+        _text = text
         self.errorMessage = errorMessage
     }
-    
+
     var body: some View {
-        VStack(alignment:.leading) {
+        VStack(alignment: .leading) {
             Text(title)
-    
-        VStack(alignment: .leading, spacing: 6){
-           
-            HStack {
-            inputField
-            if type.isSecure {
-                passwordVisibilityButton
+            VStack(alignment: .leading, spacing: 6){
+                HStack {
+                    inputField
+                        .foregroundStyle(Color.appTextPrimary)
+                        .frame(maxWidth: .infinity, minHeight: 52)
+                    if type.isSecure {
+                        passwordVisibilityButton
+                    }
+                }
             }
+            .padding(.horizontal, 16)
+            .frame(height: 52)
+            .background {
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(Color.appCardBackground)
             }
-        }
-        .padding(.horizontal,16)
-        .frame(height: 52)
-        .background{
-            RoundedRectangle(cornerRadius: 16)
-                .fill(Color(.white))
-        }
-        .overlay {
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(errorMessage == nil ?
-                  Color.gray.opacity(0.5) :
-                  Color.red, lineWidth: 1)
-        }
-        if let errorMessage {
-            Text(errorMessage)
-                .font(.caption)
-                .foregroundStyle(.red)
-                .padding(.horizontal,4)
-        }
+            .overlay {
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(errorMessage == nil ?
+                        Color.appBorder :
+                        Color.appDanger, lineWidth: 1)
+            }
+            if let errorMessage {
+                Text(errorMessage)
+                    .font(.caption)
+                    .foregroundStyle(Color.appDanger)
+                    .padding(.horizontal,4)
+            }
         }
     }
-    
+
     @ViewBuilder
     private var inputField: some View {
         if type.isSecure && !isPasswordVisible {
@@ -82,7 +82,7 @@ struct InputField: View {
             isPasswordVisible.toggle()
         }label: {
             Image(systemName: isPasswordVisible ? "eye.slash" : "eye")
-                .foregroundStyle(.secondary)
+                .foregroundStyle(Color.appTextSecondary)
         }
         .buttonStyle(.plain)
     }

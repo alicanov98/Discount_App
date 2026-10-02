@@ -13,20 +13,20 @@ enum InputFieldType {
     case phone
     case password
     case number
-    
+
     var keyboardType: UIKeyboardType {
         switch self {
         case .text,.password:
-                .default
+            .default
         case .email:
-                .emailAddress
+            .emailAddress
         case .phone:
-                .phonePad
+            .phonePad
         case .number:
-                .numberPad
+            .numberPad
         }
     }
-    
+
     var contnetType: UITextContentType? {
         switch self {
         case .email:
@@ -43,7 +43,4 @@ enum InputFieldType {
     var isSecure: Bool {
         self == .password
     }
-    
- 
-    
 }

@@ -9,17 +9,17 @@ import SwiftUI
 
 struct PrimaryButton:View {
     let title: String
-    
-    var backgroundColor: Color = .indigo
-    var textColor: Color = .white
-    var borderColor: Color = .clear
-    var borderWidth:CGFloat = 0
+
+    var backgroundColor: Color = .appPrimary
+    var textColor: Color = .appOnPrimary
+    var borderColor: Color = .appTransparent
+    var borderWidth: CGFloat = 0
     var cornerRadius: CGFloat = 16
     var height: CGFloat = 52
     var isLoading: Bool = false
     var isDisable: Bool = false
     let action: () -> Void
-    
+
     var body: some View {
         Button(action:action) {
             ZStack {
@@ -54,7 +54,7 @@ struct PrimaryButton:View {
 }
 
 #Preview {
-    PrimaryButton(title: "Test", backgroundColor: .red, textColor:.white) {
+    PrimaryButton(title: "Test", backgroundColor: .appDanger, textColor: .appOnPrimary) {
         print("Test")
     }
 }
