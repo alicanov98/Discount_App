@@ -39,23 +39,23 @@ enum NetworkError: LocalizedError {
             return "Serverdən düzgün cavab alınmadı."
         case .refreshTokenNotFound:
             return "Refresh token tapilmadi"
-        case .unauthorized(let code, let message, _):
+        case let .unauthorized(code, message, _):
             if code == "INVALID_CREDENTIALS" {
                 return "E-poçt və ya şifrə yanlışdır."
             }
 
             return message ?? "Avtorizasiya xətası baş verdi."
 
-        case .serverError(let statusCode, _, let message, _):
+        case let .serverError(statusCode, _, message, _):
             return "Server xətası: \(statusCode) - \(message ?? "Xəta baş verdi")"
 
-        case .decodingError(let error):
+        case let .decodingError(error):
             return """
             Response oxunarkən xəta baş verdi:
             \(error.localizedDescription)
             """
 
-        case .encodingError(let error):
+        case let .encodingError(error):
             return """
             Məlumat hazırlanarkən xəta baş verdi:
             \(error.localizedDescription)
@@ -64,7 +64,7 @@ enum NetworkError: LocalizedError {
         case .noInternet:
             return "İnternet bağlantısı yoxdur."
 
-        case .unknown(let error):
+        case let .unknown(error):
             return error.localizedDescription
         }
     }

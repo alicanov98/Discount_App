@@ -17,14 +17,13 @@ enum KeychainError: LocalizedError {
         case .invalidData:
             return "Məlumat Keychain üçün hazırlana bilmədi."
 
-        case .unexpectedStatus(let status):
+        case let .unexpectedStatus(status):
             return "Keychain xətası baş verdi. Status: \(status)"
         }
     }
 }
 
 final class KeychainService: TokenStore {
-
     private let service: String
 
     private let accessTokenAccount = "access_token"
@@ -89,7 +88,6 @@ final class KeychainService: TokenStore {
 }
 
 private extension KeychainService {
-
     func save(
         _ value: String,
         account: String
@@ -106,11 +104,11 @@ private extension KeychainService {
                 service,
 
             kSecAttrAccount as String:
-                account
+                account,
         ]
 
         let attributes: [String: Any] = [
-            kSecValueData as String: data
+            kSecValueData as String: data,
         ]
 
         let updateStatus = SecItemUpdate(
@@ -162,7 +160,7 @@ private extension KeychainService {
                 true,
 
             kSecMatchLimit as String:
-                kSecMatchLimitOne
+                kSecMatchLimitOne,
         ]
 
         var result: AnyObject?
@@ -198,7 +196,7 @@ private extension KeychainService {
                 service,
 
             kSecAttrAccount as String:
-                account
+                account,
         ]
 
         let status = SecItemDelete(

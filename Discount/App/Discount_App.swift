@@ -7,10 +7,21 @@
 
 import SwiftUI
 
+#if DEBUG
+    import Pulse
+    import PulseProxy
+#endif
+
 @main
 struct Discount_App: App {
     @State private var container = AppContainer()
-    
+
+    init() {
+        #if DEBUG
+            NetworkLogger.enableProxy()
+        #endif
+    }
+
     var body: some Scene {
         WindowGroup {
             RootView()

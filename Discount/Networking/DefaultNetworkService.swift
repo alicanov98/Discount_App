@@ -25,7 +25,7 @@ final class DefaultNetworkService: NetworkServiceProtocol {
 
     func request<Response: Decodable>(
         _ endpoint: any Endpoint,
-        responseType: Response.Type
+        responseType _: Response.Type
     ) async throws -> Response {
         let data = try await performRequest(endpoint)
 
@@ -128,7 +128,7 @@ private extension DefaultNetworkService {
             )
         }
 
-        endpoint.headers.forEach { key, value in
+        for (key, value) in endpoint.headers {
             request.setValue(
                 value,
                 forHTTPHeaderField: key
@@ -192,15 +192,15 @@ private extension DefaultNetworkService {
         _ error: Error,
         data: Data
     ) {
-#if DEBUG
-        print("Decoding error:", error)
+        #if DEBUG
+            print("Decoding error:", error)
 
-        if let json = String(
-            data: data,
-            encoding: .utf8
-        ) {
-            print("Response JSON:", json)
-        }
-#endif
+            if let json = String(
+                data: data,
+                encoding: .utf8
+            ) {
+                print("Response JSON:", json)
+            }
+        #endif
     }
 }
