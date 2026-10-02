@@ -1,5 +1,5 @@
 //
-//  LoginResponse.swift
+//  AuthResponse.swift
 //  Discount
 //
 //  Created by Malik Alijanov on 18.09.26.
@@ -15,7 +15,7 @@ struct LoginResponse: Decodable {
         let tokenType: String
         let expiresIn: Int
         let refreshExpiresAt: String
-        
+
         enum CodingKeys: String, CodingKey {
             case user
             case accessToken = "access_token"
@@ -25,7 +25,6 @@ struct LoginResponse: Decodable {
             case refreshExpiresAt = "refresh_expires_at"
         }
     }
-
 }
 
 struct RegisterResponse: Decodable {
@@ -33,12 +32,21 @@ struct RegisterResponse: Decodable {
 }
 
 struct RegisterData: Decodable {
-    let user: User
     let accessToken: String
-    let refreshToken: String
-    let tokenType: String
     let expiresIn: Int
     let refreshExpiresAt: String
+    let refreshToken: String
+    let tokenType: String
+    let user: User
+
+    enum CodingKeys: String, CodingKey {
+        case accessToken = "access_token"
+        case expiresIn = "expires_in"
+        case refreshExpiresAt = "refresh_expires_at"
+        case refreshToken = "refresh_token"
+        case tokenType = "token_type"
+        case user
+    }
 }
 
 struct RefreshTokenResponse: Decodable {
@@ -61,3 +69,19 @@ struct RefreshTokenData: Decodable {
     }
 }
 
+struct ForgetPasswordResponse: Decodable {
+    let data: ForgetPasswordData
+
+    struct ForgetPasswordData: Decodable {
+        let message: String
+    }
+}
+
+struct ResetPasswordResponse: Decodable {
+    let data: ResetPasswordData
+
+    struct ResetPasswordData: Decodable {
+        let success: Bool
+        let message: String
+    }
+}

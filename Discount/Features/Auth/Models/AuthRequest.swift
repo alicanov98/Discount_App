@@ -1,5 +1,5 @@
 //
-//  LoginRequest.swift
+//  AuthRequest.swift
 //  Discount
 //
 //  Created by Malik Alijanov on 18.09.26.
@@ -23,4 +23,13 @@ struct RegisterRequest: Encodable {
     let email: String
     let password: String
     let role: String
+}
+
+struct ForgetPasswordRequest: Encodable {
+    let email: String
+}
+
+struct ResetPasswordRequest: Encodable {
+    let token: String
+    let password: String
 }

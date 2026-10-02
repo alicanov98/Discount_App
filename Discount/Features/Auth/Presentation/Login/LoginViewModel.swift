@@ -26,51 +26,52 @@ final class LoginViewModel {
     var email = ""
     var password = ""
     #endif
-    private(set) var errorMessage: String?
-    private(set) var isLoading = false
-    
+    private(set) var state: ViewState = .idle
     private let sessionStore: SessionStore
     
     init(sessionStore: SessionStore){
         self.sessionStore = sessionStore
     }
-    
-    var isFormValid: Bool {
-        !email.trimmingCharacters(in: .whitespaces).isEmpty &&
-        !password.isEmpty
+
+    var isLoading: Bool {
+        state == .loading
     }
-    
-    func login(appState:AppState)async {
-        errorMessage = nil
+
+    var errorMessage: String? {
+        if case let .error(message) = state {
+            return message
+        }
+        return nil
+    }
+
+    var isFormValid: Bool {
+        validate(email: email, password: password).isValid
+    }
+
+    func login(appState: AppState) async {
+        guard !isLoading else { return }
+
+        state = .idle
+
         let validation = validate(email: email, password: password)
         guard validation.isValid else {
-            errorMessage = validation.message
-             return
-         }
-         
-        isLoading = true
-         defer { isLoading =  false}
-       
-         do{
-             try await sessionStore.login(
+            state = .error(validation.message)
+            return
+        }
+
+        state = .loading
+        defer {
+            state = .loaded
+        }
+        do {
+            try await sessionStore.login(
                 email: email.trimmingCharacters(in: .whitespacesAndNewlines),
                 password: password
-             )
-             appState.loginCompleted()
-         }catch {
-             errorMessage = error.localizedDescription
-         }
-  
-       
+            )
+            appState.loginCompleted()
+        } catch {
+            state = .error(error.localizedDescription)
+        }
     }
-    
-  
 }
 
-//**Biznes hesabı:**
-//- Email: `business@kesf.example`
-//- Şifrə: `KesfDemo2026!`
-//
-//**Adi istifadəçi hesabı:**
-//- Email: `demo@kesf.example`
-//- Şifrə: `KesfDemo2026!`
