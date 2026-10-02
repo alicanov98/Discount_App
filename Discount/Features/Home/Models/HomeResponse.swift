@@ -12,7 +12,7 @@ struct MeResponseData:Codable {
     let data: User
 }
 
-struct HomeDataResponse: Decodable {
+struct HomeDataResponse<Value: Decodable>: Decodable {
      let data: Value
     }
 struct CampaignPage: Decodable {

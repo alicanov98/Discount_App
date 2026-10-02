@@ -11,29 +11,62 @@ struct MainTabView: View {
     
     @Environment(AppContainer.self) private var container
 
-    
     var body: some View {
         TabView {
-        HomeView(viewModel: container.makeHomeViewModel())
-          .tabItem {
+            NavigationStack {
+                HomeView(viewModel: container.makeHomeViewModel())
+            }
+            .tabItem {
                 Label("Ana səhifə", systemImage: "house")
-           }
-        SearchView()
-                .tabItem {
-                    Label("Axtar", systemImage: "magnifyingglass")
+            }
+            NavigationStack {
+                SearchView()
+            }
+            .tabItem {
+                Label("Axtar", systemImage: "magnifyingglass")
+            }
+            NavigationStack {
+                FavoritesView()
+            }
+            .tabItem {
+                Label("Seçilmişlər", systemImage: "heart")
+            }
+            NavigationStack {
+                ProfileView()
+            }
+            .tabItem {
+                Label("Profil", systemImage: "person")
+            }
+        }
+        .tint(Color.appPrimary)
+        .environment(container.favoritesStore)
+        .task(id: container.sessionStore.currentUser?.id) {
+            await container.favoritesStore.load()
+        }
+        .alert(
+            "Seçilmişlər yenilənmədi",
+            isPresented: Binding(
+                get: {
+                    container.favoritesStore.errorMessage != nil
+                },
+                set: {
+                    if !$0 {
+                        container.favoritesStore.errorMessage = nil
+                    }
                 }
-        FavoritesView()
-                .tabItem {
-                    Label("Secilmisler", systemImage: "heart")
+            )
+        ) {
+            Button("Yenidən cəhd et") {
+                Task {
+                    await container.favoritesStore.load()
                 }
-        ProfileView()
-                .tabItem {
-                    Label("Profil", systemImage: "person")
-                }
+            }
+            Button("Bağla", role: .cancel) {
+                container.favoritesStore.errorMessage = nil
+            }
+
+        } message: {
+            Text(container.favoritesStore.errorMessage ?? "")
         }
     }
 }
-
-//#Preview {
-//    MainTabView()
-//}

@@ -1,3 +1,10 @@
+//
+//  AppContainer.swift
+//  Discount
+//
+//  Created by Malik Alijanov on 17.09.26.
+//
+
 import Observation
 
 @MainActor
@@ -5,7 +12,8 @@ import Observation
 final class AppContainer {
     let appState: AppState
     let sessionStore: SessionStore
-    private let homeRepository: any HomeRepositoryProtocol
+    let homeRepository: any HomeRepositoryProtocol
+    let favoritesStore: FavoritesStore
 
     init() {
         let tokenStore = KeychainService()
@@ -17,11 +25,16 @@ final class AppContainer {
         )
 
         self.sessionStore = sessionStore
-        self.appState = AppState(
+        appState = AppState(
             tokenStore: tokenStore,
             sessionStore: sessionStore
         )
-        self.homeRepository = HomeRepository(networkService: networkService)
+        let homeRepository = HomeRepository(networkService: networkService)
+        self.homeRepository = homeRepository
+        favoritesStore = FavoritesStore(
+            repository: homeRepository,
+             sessionStore: sessionStore
+             )
     }
 
     func makeHomeViewModel() -> HomeViewModel {
