@@ -14,6 +14,7 @@ final class AppContainer {
     let sessionStore: SessionStore
     let homeRepository: any HomeRepositoryProtocol
     let favoritesStore: FavoritesStore
+    let profileRepository: any ProfileRepositoryProtocol
 
     init() {
         let tokenStore = KeychainService()
@@ -31,6 +32,7 @@ final class AppContainer {
         )
         let homeRepository = HomeRepository(networkService: networkService)
         self.homeRepository = homeRepository
+        profileRepository = ProfileRepository(networkService: networkService)
         favoritesStore = FavoritesStore(
             repository: homeRepository,
              sessionStore: sessionStore
@@ -43,4 +45,13 @@ final class AppContainer {
             homeRepository: homeRepository
         )
     }
+
+    func makeProfileViewModel() -> ProfileViewModel {
+        ProfileViewModel(
+            repository: profileRepository,
+            sessionStore: sessionStore,
+            appState: appState
+        )
+    }
+
 }

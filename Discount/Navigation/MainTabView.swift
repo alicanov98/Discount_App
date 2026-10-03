@@ -32,7 +32,7 @@ struct MainTabView: View {
                 Label("Seçilmişlər", systemImage: "heart")
             }
             NavigationStack {
-                ProfileView()
+                ProfileView(viewModel: container.makeProfileViewModel())
             }
             .tabItem {
                 Label("Profil", systemImage: "person")
