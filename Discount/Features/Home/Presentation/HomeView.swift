@@ -42,7 +42,7 @@ struct HomeView: View {
             .padding(20)
         }
         .background(Color.appBackground)
-        .navigationTitle("kəşf.")
+        .navigationTitle("discount.")
         .navigationBarTitleDisplayMode(.inline)
         .navigationDestination(item: $searchQuery) {
             query in SearchView(initialQuery: query)

@@ -1,6 +1,3 @@
-Məntiqi dəyişmədən formatladım, artıq boşluqları və Markdown simvollarını təmizlədim:
-
-```swift
 //
 //  ProfileEditorView.swift
 //  Discount
@@ -439,4 +436,3 @@ struct ProfileEditorView: View {
         )
     }
 }
-```
