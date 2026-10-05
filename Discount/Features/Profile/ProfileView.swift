@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ProfileView: View {
     @State private var viewModel: ProfileViewModel
@@ -189,16 +190,20 @@ struct ProfileView: View {
                     .font(AppTypography.title)
                     .foregroundStyle(Color.appPrimary)
 
-                if let logo = viewModel.business?.logoURL,
-                   let url = URL(string: logo)
+                if let url = ImageURLBuilder.makeURL(path: viewModel.business?.logoURL)
                 {
-                    AsyncImage(url: url) { image in
-                        image
-                            .resizable()
-                            .scaledToFill()
-                    } placeholder: {
-                        Color.appTransparent
+                    WebImage(url: url) { phase in
+                        switch phase {
+                        case .success(let image):
+                            image.resizable().scaledToFill()
+                        case .empty:
+                            Color.appPrimarySoft
+                                .overlay { ProgressView() }
+                        case .failure:
+                            Color.appTransparent
+                        }
                     }
+                    .id(url)
                 }
             }
             .frame(width: 76, height: 76)

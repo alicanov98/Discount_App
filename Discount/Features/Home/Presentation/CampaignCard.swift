@@ -1,11 +1,12 @@
 //
-//  HomeResponse.swift
+//  CampaignArtwork.swift
 //  Discount
 //
 //  Created by Malik Alijanov on 02.10.26.
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct CampaignArtwork: View {
     let campaign: Campaign
@@ -13,23 +14,24 @@ struct CampaignArtwork: View {
     var body: some View {
         GeometryReader {
             geometry in
-            AsyncImage(
-                url: campaign.imageURL.flatMap(URL.init(string:))) 
-                { phase in
-                if let image = phase.image {
-                    image.resizable().scaledToFill()
+            let url = ImageURLBuilder.makeURL(path: campaign.imageURL)
 
-                } else {
-                    ZStack {
-                        LinearGradient(
-                            colors: [Color.appPrimarySoft, Color.appLavender],
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                        Image(systemName: "tag")
-                        .font(.system(size: 52, weight: .light))
-                        .foregroundStyle(Color.appPrimary)
+            Group {
+                if let url {
+                    WebImage(url: url) { phase in
+                        switch phase {
+                        case .success(let image):
+                            image.resizable().scaledToFill()
+                        case .empty:
+                            Color.appPrimarySoft
+                                .overlay { ProgressView() }
+                        case .failure:
+                            fallback
+                        }
                     }
+                    .id(url)
+                } else {
+                    fallback
                 }
             }
             .frame(
@@ -40,6 +42,19 @@ struct CampaignArtwork: View {
         }
         .contentShape(Rectangle())
         .accessibilityHidden(true)
+    }
+
+    private var fallback: some View {
+        ZStack {
+            LinearGradient(
+                colors: [Color.appPrimarySoft, Color.appLavender],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+            Image(systemName: "tag")
+                .font(.system(size: 52, weight: .light))
+                .foregroundStyle(Color.appPrimary)
+        }
     }
 }
 

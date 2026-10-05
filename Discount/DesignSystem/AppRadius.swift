@@ -1,5 +1,5 @@
 //
-//  ResetPasswordView.swift
+//  AppRadius.swift
 //  Discount
 //
 //  Created by Malik Alijanov on 05.10.26.

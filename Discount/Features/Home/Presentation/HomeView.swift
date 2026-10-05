@@ -20,8 +20,6 @@ struct HomeView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 28) {
                 header
-                hero
-                searchBar
                 categories
                 if let error = viewModel.errorMessage {
                     CampaignErrorView(message: error) {
@@ -42,8 +40,6 @@ struct HomeView: View {
             .padding(20)
         }
         .background(Color.appBackground)
-        .navigationTitle("discount.")
-        .navigationBarTitleDisplayMode(.inline)
         .navigationDestination(item: $searchQuery) {
             query in SearchView(initialQuery: query)
         }
@@ -83,65 +79,6 @@ struct HomeView: View {
         }
     }
 
-    private var hero: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            Label("AZ XƏRCLƏ. ÇOX YAŞA.", systemImage: "sparkles")
-            .font(AppTypography.caption)
-            Text("Şəhər dolusu fürsət.\nSənin üçün seçildi.").font(AppTypography.title)
-            Text("Sevdiyin markalar və qaçırmaq istəməyəcəyin endirimlər bir yerdə.")
-                .font(AppTypography.body)
-            Button {
-                searchQuery = CampaignQuery()
-            } label: {
-                Label("Təklifləri kəşf et", systemImage: "arrow.up.right")
-                    .font(AppTypography.button).padding(14)
-                    .foregroundStyle(Color.appPrimary)
-                    .background(Color.appWhite, in: RoundedRectangle(cornerRadius: 14))
-            }
-            .buttonStyle(.plain)
-        }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(24)
-        .foregroundStyle(Color.appOnPrimary)
-        .background(
-            LinearGradient(
-                colors: [Color.appPrimary, Color.appViolet],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            ),
-            in: RoundedRectangle(cornerRadius: 26)
-        )
-    }
-
-    private var searchBar: some View {
-        HStack(spacing: 12) {
-            Image(systemName: "magnifyingglass")
-            .foregroundStyle(Color.appTextMuted)
-            TextField("Kampaniya, marka, məkan…", text: $searchText)
-                .submitLabel(.search)
-                .onSubmit {
-                    searchQuery = CampaignQuery(search: searchText)
-                }
-            Button {
-                searchQuery = CampaignQuery(search: searchText)
-            } label: {
-                Image(systemName: "arrow.right")
-                .frame(width: 44, height: 44)
-                    .foregroundStyle(Color.appOnPrimary)
-                    .background(
-                        Color.appPrimary,
-                        in: RoundedRectangle(cornerRadius: 12)
-                    )
-            }
-            .accessibilityLabel("Axtar")
-        }
-        .padding(10).background(
-            Color.appCardBackground, 
-        in: RoundedRectangle(cornerRadius: 18)
-        )
-        .overlay(RoundedRectangle(cornerRadius: 18)
-        .stroke(Color.appBorder))
-    }
 
     private var categories: some View {
         VStack(alignment: .leading, spacing: 16) {

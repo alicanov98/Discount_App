@@ -10,6 +10,9 @@
 		F4853F16306817E2000F1F14 /* Pulse in Frameworks */ = {isa = PBXBuildFile; productRef = F4853F15306817E2000F1F14 /* Pulse */; };
 		F4853F18306817E2000F1F14 /* PulseProxy in Frameworks */ = {isa = PBXBuildFile; productRef = F4853F17306817E2000F1F14 /* PulseProxy */; };
 		F4853F1A306817E2000F1F14 /* PulseUI in Frameworks */ = {isa = PBXBuildFile; productRef = F4853F19306817E2000F1F14 /* PulseUI */; };
+		F4C76CBB30741486000D5292 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = F4C76CBA30741486000D5292 /* SDWebImage */; };
+		F4C76CBD30741486000D5292 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F4C76CBC30741486000D5292 /* SDWebImageMapKit */; };
+		F4C76CC0307414B0000D5292 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F4C76CBF307414B0000D5292 /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +74,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4C76CC0307414B0000D5292 /* SDWebImageSwiftUI in Frameworks */,
 				F4853F1A306817E2000F1F14 /* PulseUI in Frameworks */,
+				F4C76CBD30741486000D5292 /* SDWebImageMapKit in Frameworks */,
 				F4853F16306817E2000F1F14 /* Pulse in Frameworks */,
+				F4C76CBB30741486000D5292 /* SDWebImage in Frameworks */,
 				F4853F18306817E2000F1F14 /* PulseProxy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +143,9 @@
 				F4853F15306817E2000F1F14 /* Pulse */,
 				F4853F17306817E2000F1F14 /* PulseProxy */,
 				F4853F19306817E2000F1F14 /* PulseUI */,
+				F4C76CBA30741486000D5292 /* SDWebImage */,
+				F4C76CBC30741486000D5292 /* SDWebImageMapKit */,
+				F4C76CBF307414B0000D5292 /* SDWebImageSwiftUI */,
 			);
 			productName = Discount;
 			productReference = F45F4E7F305ADE73000FD38F /* Discount.app */;
@@ -222,6 +231,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				F4853F14306817E2000F1F14 /* XCRemoteSwiftPackageReference "Pulse" */,
+				F4C76CB930741486000D5292 /* XCRemoteSwiftPackageReference "sdwebimage" */,
+				F4C76CBE307414B0000D5292 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F45F4E80305ADE73000FD38F /* Products */;
@@ -618,6 +629,22 @@
 				minimumVersion = 5.2.3;
 			};
 		};
+		F4C76CB930741486000D5292 /* XCRemoteSwiftPackageReference "sdwebimage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sdwebimage/sdwebimage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.21.7;
+			};
+		};
+		F4C76CBE307414B0000D5292 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -635,6 +662,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F4853F14306817E2000F1F14 /* XCRemoteSwiftPackageReference "Pulse" */;
 			productName = PulseUI;
+		};
+		F4C76CBA30741486000D5292 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4C76CB930741486000D5292 /* XCRemoteSwiftPackageReference "sdwebimage" */;
+			productName = SDWebImage;
+		};
+		F4C76CBC30741486000D5292 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4C76CB930741486000D5292 /* XCRemoteSwiftPackageReference "sdwebimage" */;
+			productName = SDWebImageMapKit;
+		};
+		F4C76CBF307414B0000D5292 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4C76CBE307414B0000D5292 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
