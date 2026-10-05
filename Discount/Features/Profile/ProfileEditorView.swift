@@ -152,37 +152,6 @@ struct ProfileEditorView: View {
                 }
             }
 
-        case .location:
-            card(title: "Məkan", symbol: section.symbol) {
-                Text(
-                    viewModel.isBusiness
-                        ? "Müştərilərinin səni tapa biləcəyi məkanı qeyd et."
-                        : "Yaxın təkliflər üçün məkanını qeyd et."
-                )
-                .font(AppTypography.caption)
-                .foregroundStyle(Color.appTextSecondary)
-
-                input(
-                    "Enlik",
-                    text: $draft.latitude,
-                    keyboard: .numbersAndPunctuation,
-                    capitalization: .never,
-                    placeholder: "40.4093"
-                )
-
-                input(
-                    "Uzunluq",
-                    text: $draft.longitude,
-                    keyboard: .numbersAndPunctuation,
-                    capitalization: .never,
-                    placeholder: "49.8671"
-                )
-
-                Text("Məkanı silmək üçün hər iki koordinatı boş saxla.")
-                    .font(AppTypography.caption)
-                    .foregroundStyle(Color.appTextMuted)
-            }
-
         case .notifications:
             card(
                 title: "Bildiriş seçimləri",
@@ -190,7 +159,7 @@ struct ProfileEditorView: View {
             ) {
                 notificationToggle(
                     "Yaxınlıqdakı kampaniyalar",
-                    description: "Saxlanmış məkanına yaxın yeni təkliflər.",
+                    description: "Yaxınlıqdakı yeni təkliflər.",
                     value: $draft.notifyNearby
                 )
 
@@ -208,13 +177,6 @@ struct ProfileEditorView: View {
                     "Seçilmişlərdə yeniliklər",
                     description: "Yenilənən və bitmək üzrə olan seçilmiş təkliflər.",
                     value: $draft.notifyFavorites
-                )
-
-                input(
-                    "Yaxınlıq radiusu (km)",
-                    text: $draft.notificationRadius,
-                    keyboard: .decimalPad,
-                    capitalization: .never
                 )
             }
 

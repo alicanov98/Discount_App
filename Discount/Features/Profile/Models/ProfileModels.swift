@@ -9,7 +9,6 @@ import Foundation
 
 enum ProfileSection: String, Identifiable, Hashable {
     case identity
-    case location
     case notifications
     case interests
 
@@ -21,8 +20,6 @@ enum ProfileSection: String, Identifiable, Hashable {
         switch self {
         case .identity:
             isBusiness ? "Biznes məlumatları" : "Şəxsi məlumatlar"
-        case .location:
-            "Məkan"
         case .notifications:
             "Bildiriş seçimləri"
         case .interests:
@@ -34,8 +31,6 @@ enum ProfileSection: String, Identifiable, Hashable {
         switch self {
         case .identity:
             "person.text.rectangle"
-        case .location:
-            "mappin.and.ellipse"
         case .notifications:
             "bell.badge"
         case .interests:
@@ -47,8 +42,6 @@ enum ProfileSection: String, Identifiable, Hashable {
         switch self {
         case .identity:
             "Ad və əlaqə məlumatlarını idarə et"
-        case .location:
-            "Saxlanmış məkanını dəyiş"
         case .notifications:
             "Xəbərdarlıqları və yaxınlıq radiusunu seç"
         case .interests:
@@ -98,8 +91,6 @@ struct ProfileUpdateRequest: Encodable {
 
     let name: String
     let email: String
-    let latitude: Double?
-    let longitude: Double?
     let notificationRadius: Double
     let notifyNearby: Bool
     let notifyInterests: Bool
@@ -108,8 +99,6 @@ struct ProfileUpdateRequest: Encodable {
     enum CodingKeys: String, CodingKey {
         case name
         case email
-        case latitude
-        case longitude
         case notificationRadius = "notification_radius"
         case notifyNearby = "notify_nearby"
         case notifyInterests = "notify_interests"
@@ -122,11 +111,6 @@ struct ProfileUpdateRequest: Encodable {
         if section == nil || section == .identity {
             try container.encode(name, forKey: .name)
             try container.encode(email, forKey: .email)
-        }
-
-        if section == nil || section == .location {
-            try container.encode(latitude, forKey: .latitude)
-            try container.encode(longitude, forKey: .longitude)
         }
 
         if section == nil || section == .notifications {
@@ -146,8 +130,6 @@ struct BusinessUpdateRequest: Encodable {
     let categoryID: Int?
     let phone: String?
     let address: String?
-    let latitude: Double?
-    let longitude: Double?
     let description: String?
     let logoURL: String?
 
@@ -156,8 +138,6 @@ struct BusinessUpdateRequest: Encodable {
         case email
         case phone
         case address
-        case latitude
-        case longitude
         case description
         case categoryID = "category_id"
         case logoURL = "logo_url"
@@ -176,18 +156,12 @@ struct BusinessUpdateRequest: Encodable {
             try container.encode(logoURL, forKey: .logoURL)
         }
 
-        if section == nil || section == .location {
-            try container.encode(latitude, forKey: .latitude)
-            try container.encode(longitude, forKey: .longitude)
-        }
     }
 }
 
 struct ProfileDraft: Equatable {
     var name = ""
     var email = ""
-    var latitude = ""
-    var longitude = ""
     var notificationRadius = "5"
     var notifyNearby = true
     var notifyInterests = true
@@ -203,8 +177,6 @@ struct ProfileDraft: Equatable {
     init(user: User) {
         name = user.name
         email = user.email
-        latitude = user.latitude.map { String($0) } ?? ""
-        longitude = user.longitude.map { String($0) } ?? ""
         notificationRadius = String(user.notificationRadius)
         notifyNearby = user.notifyNearby
         notifyInterests = user.notifyInterests
@@ -214,8 +186,6 @@ struct ProfileDraft: Equatable {
     init(business: BusinessProfile) {
         name = business.name
         email = business.email
-        latitude = business.latitude.map { String($0) } ?? ""
-        longitude = business.longitude.map { String($0) } ?? ""
         categoryID = business.categoryID
         phone = business.phone ?? ""
         address = business.address ?? ""
@@ -233,10 +203,6 @@ struct ProfileDraft: Equatable {
         let identity = section == nil || section == .identity
             ? try validatedIdentity()
             : (name: name, email: email)
-
-        let coordinates = section == nil || section == .location
-            ? try validatedCoordinates()
-            : (latitude: nil as Double?, longitude: nil as Double?)
 
         var radius = 5.0
 
@@ -257,8 +223,6 @@ struct ProfileDraft: Equatable {
             section: section,
             name: identity.name,
             email: identity.email,
-            latitude: coordinates.latitude,
-            longitude: coordinates.longitude,
             notificationRadius: radius,
             notifyNearby: notifyNearby,
             notifyInterests: notifyInterests,
@@ -269,7 +233,7 @@ struct ProfileDraft: Equatable {
     func businessRequest(
         section: ProfileSection? = nil
     ) throws -> BusinessUpdateRequest {
-        guard section == nil || section == .identity || section == .location else {
+        guard section == nil || section == .identity else {
             throw ProfileValidationError(
                 "Bu bölmə biznes hesabı üçün mövcud deyil."
             )
@@ -279,17 +243,12 @@ struct ProfileDraft: Equatable {
             ? try validatedIdentity()
             : (name: name, email: email)
 
-        let coordinates = section == nil || section == .location
-            ? try validatedCoordinates()
-            : (latitude: nil as Double?, longitude: nil as Double?)
-
         let phone = Self.optionalText(phone)
 
-        if section != .location,
-           let phone,
+        if let phone,
            !(5...30).contains(phone.count)
                || phone.range(
-                   of: #"^\\+?[0-9 ()-]+$"#,
+                   of: #"^\+?[0-9 ()-]+$"#,
                    options: .regularExpression
                ) == nil
         {
@@ -300,7 +259,7 @@ struct ProfileDraft: Equatable {
 
         let logo = Self.optionalText(logoURL)
 
-        if section != .location, let logo {
+        if let logo {
             guard logo.count <= 2000,
                   let url = URL(string: logo),
                   ["http", "https"].contains(url.scheme?.lowercased() ?? ""),
@@ -312,8 +271,7 @@ struct ProfileDraft: Equatable {
             }
         }
 
-        guard section == .location
-            || (address.count <= 500 && description.count <= 5000)
+        guard address.count <= 500 && description.count <= 5000
         else {
             throw ProfileValidationError(
                 "Ünvan ən çox 500, biznes haqqında məlumat isə 5000 simvol olmalıdır."
@@ -327,8 +285,6 @@ struct ProfileDraft: Equatable {
             categoryID: categoryID,
             phone: phone,
             address: Self.optionalText(address),
-            latitude: coordinates.latitude,
-            longitude: coordinates.longitude,
             description: Self.optionalText(description),
             logoURL: logo
         )
@@ -348,7 +304,7 @@ struct ProfileDraft: Equatable {
 
         guard email.count <= 254,
               email.range(
-                  of: #"^[^\s@]+@[^\s@]+\\.[^\s@]+$"#,
+                  of: #"^[^\s@]+@[^\s@]+\.[^\s@]+$"#,
                   options: .regularExpression
               ) != nil
         else {
@@ -358,32 +314,6 @@ struct ProfileDraft: Equatable {
         }
 
         return (name, email)
-    }
-
-    private func validatedCoordinates() throws -> (
-        latitude: Double?,
-        longitude: Double?
-    ) {
-        let latitude = Self.optionalText(latitude)
-        let longitude = Self.optionalText(longitude)
-
-        if latitude == nil, longitude == nil {
-            return (nil, nil)
-        }
-
-        guard let latitude,
-              let longitude,
-              let lat = Self.number(latitude),
-              let lon = Self.number(longitude),
-              (-90...90).contains(lat),
-              (-180...180).contains(lon)
-        else {
-            throw ProfileValidationError(
-                "Enlik (-90…90) və uzunluğu (-180…180) birlikdə daxil et və ya hər ikisini boş saxla."
-            )
-        }
-
-        return (lat, lon)
     }
 
     private static func number(_ text: String) -> Double? {

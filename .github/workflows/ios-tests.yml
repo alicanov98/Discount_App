@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Select Xcode version
+      - name: Select Xcode
         run: |
           sudo xcode-select -switch /Applications/Xcode.app
           xcodebuild -version
@@ -24,8 +24,6 @@ jobs:
           xcodebuild test \
             -project Discount.xcodeproj \
             -scheme Discount \
-            -destination 'platform=iOS Simulator,id=${{ env.IOS_SIMULATOR_ID }}' \
+            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
             -derivedDataPath .build/DerivedData \
             CODE_SIGNING_ALLOWED=NO
-        env:
-          IOS_SIMULATOR_ID: 8C0164BA-5D6E-4A5F-81B3-563760E67570

@@ -13,6 +13,7 @@ final class AppContainer {
     let appState: AppState
     let sessionStore: SessionStore
     let homeRepository: any HomeRepositoryProtocol
+    let mapRepository: any MapRepositoryProtocol
     let favoritesStore: FavoritesStore
     let profileRepository: any ProfileRepositoryProtocol
 
@@ -32,6 +33,7 @@ final class AppContainer {
         )
         let homeRepository = HomeRepository(networkService: networkService)
         self.homeRepository = homeRepository
+        mapRepository = MapRepository(networkService: networkService)
         profileRepository = ProfileRepository(networkService: networkService)
         favoritesStore = FavoritesStore(
             repository: homeRepository,

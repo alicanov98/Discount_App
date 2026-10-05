@@ -175,8 +175,8 @@ struct ProfileView: View {
 
     private var sections: [ProfileSection] {
         viewModel.isBusiness
-            ? [.identity, .location]
-            : [.identity, .location, .notifications, .interests]
+            ? [.identity]
+            : [.identity, .notifications, .interests]
     }
 
     private var identity: some View {
@@ -239,18 +239,6 @@ struct ProfileView: View {
 
     private var accountActions: some View {
         card(title: "Hesab", symbol: "person.crop.circle") {
-            if !viewModel.isBusiness {
-                NavigationLink {
-                    FavoritesView()
-                } label: {
-                    Label("Seçilmiş təkliflərim", systemImage: "heart")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .font(AppTypography.body)
-                .padding(.vertical, 8)
-
-                Divider()
-            }
 
             logoutButton
 

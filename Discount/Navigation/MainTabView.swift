@@ -26,6 +26,12 @@ struct MainTabView: View {
                 Label("Axtar", systemImage: "magnifyingglass")
             }
             NavigationStack {
+                MapView(viewModel: MapViewModel(repository: container.mapRepository))
+            }
+            .tabItem {
+                Label("Xəritə", systemImage: "map")
+            }
+            NavigationStack {
                 FavoritesView()
             }
             .tabItem {

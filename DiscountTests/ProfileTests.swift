@@ -13,9 +13,7 @@ import Testing
 struct ProfileTests {
     @Test
     func separateEditorsEncodeOnlyTheirOwnFields() throws {
-        var draft = ProfileDraft(user: User.mock)
-        draft.latitude = ""
-        draft.longitude = ""
+        let draft = ProfileDraft(user: User.mock)
 
         var request = try draft.personalRequest()
         request.section = .identity
@@ -27,16 +25,6 @@ struct ProfileTests {
         )
 
         #expect(Set(json.keys) == ["name", "email"])
-
-        request.section = .location
-        json = try #require(
-            JSONSerialization.jsonObject(
-                with: JSONEncoder().encode(request)
-            ) as? [String: Any]
-        )
-
-        #expect(Set(json.keys) == ["latitude", "longitude"])
-        #expect(json["latitude"] is NSNull)
 
         request.section = .notifications
         json = try #require(
@@ -58,15 +46,6 @@ struct ProfileTests {
             business: profileBusinessFixture
         ).businessRequest()
 
-        business.section = .location
-        json = try #require(
-            JSONSerialization.jsonObject(
-                with: JSONEncoder().encode(business)
-            ) as? [String: Any]
-        )
-
-        #expect(Set(json.keys) == ["latitude", "longitude"])
-
         business.section = .identity
         json = try #require(
             JSONSerialization.jsonObject(
@@ -82,27 +61,12 @@ struct ProfileTests {
     @Test
     func editingOneSectionDoesNotValidateUnrelatedFields() throws {
         var draft = ProfileDraft(user: User.mock)
-        draft.latitude = "invalid"
         draft.notificationRadius = "invalid"
-
-        #expect(
-            try draft.personalRequest(section: .identity).name == User.mock.name
-        )
-
+        #expect(try draft.personalRequest(section: .identity).name == User.mock.name)
         draft.name = ""
-        draft.latitude = "40.4"
-
-        #expect(
-            try draft.personalRequest(section: .location).latitude == 40.4
-        )
-
-        var business = ProfileDraft(business: profileBusinessFixture)
-        business.phone = "invalid"
-        business.logoURL = "invalid"
-
-        #expect(
-            try business.businessRequest(section: .location).latitude == 40.4
-        )
+        draft.email = "invalid"
+        draft.notificationRadius = "5"
+        #expect(try draft.personalRequest(section: .notifications).notificationRadius == 5)
     }
 
     @Test
@@ -139,10 +103,8 @@ struct ProfileTests {
     }
 
     @Test
-    func clearedLocationAndBusinessFieldsEncodeAsNull() throws {
+    func profileRequestsOmitCoordinatesAndClearedBusinessFieldsEncodeAsNull() throws {
         var personal = ProfileDraft(user: User.mock)
-        personal.latitude = ""
-        personal.longitude = ""
         personal.notificationRadius = "0,5"
 
         let request = try personal.personalRequest()
@@ -152,8 +114,8 @@ struct ProfileTests {
             ) as? [String: Any]
         )
 
-        #expect(json["latitude"] is NSNull)
-        #expect(json["longitude"] is NSNull)
+        #expect(json["latitude"] == nil)
+        #expect(json["longitude"] == nil)
         #expect(json["notification_radius"] as? Double == 0.5)
 
         var business = ProfileDraft(business: profileBusinessFixture)
@@ -176,15 +138,8 @@ struct ProfileTests {
     }
 
     @Test
-    func rejectsUnpairedCoordinatesAndInvalidRadius() throws {
+    func rejectsInvalidNotificationRadius() throws {
         var draft = ProfileDraft(user: User.mock)
-        draft.longitude = ""
-
-        #expect(throws: ProfileValidationError.self) {
-            try draft.personalRequest()
-        }
-
-        draft.latitude = ""
         draft.notificationRadius = "0"
 
         #expect(throws: ProfileValidationError.self) {
@@ -437,8 +392,8 @@ private final class FakeProfileRepository: ProfileRepositoryProtocol {
             categoryID: request.categoryID,
             phone: request.phone,
             address: request.address,
-            latitude: request.latitude,
-            longitude: request.longitude,
+            latitude: profileBusinessFixture.latitude,
+            longitude: profileBusinessFixture.longitude,
             description: request.description,
             logoURL: request.logoURL
         )
