@@ -60,14 +60,12 @@ final class LoginViewModel {
         }
 
         state = .loading
-        defer {
-            state = .loaded
-        }
         do {
             try await sessionStore.login(
                 email: email.trimmingCharacters(in: .whitespacesAndNewlines),
                 password: password
             )
+            state = .loaded
             appState.loginCompleted()
         } catch {
             state = .error(error.localizedDescription)

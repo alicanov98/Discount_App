@@ -16,7 +16,7 @@ struct ForgotPasswordView: View {
 
     var body: some View {
         ScrollView {
-            VStack(spacing: 24) {
+            VStack(spacing: AppSpacing.lg) {
                 Text("Şifrənizi yeniləmək üçün email daxil edin.")
                     .font(AppTypography.largeTitle)
                     .multilineTextAlignment(.center)
@@ -31,7 +31,7 @@ struct ForgotPasswordView: View {
 
                 PrimaryButton(
                     title: "Şifrəni yenilə",
-                    borderColor: .appBorder
+                    isLoading: viewModel.isLoading
                 ) {
                     Task {
                         await viewModel.forgetPassword()
@@ -39,9 +39,14 @@ struct ForgotPasswordView: View {
                 }
                 message
             }
-            .padding(.horizontal, 24)
-            .padding(.vertical, 24)
+            .disabled(viewModel.isLoading)
+            .padding(.horizontal, AppSpacing.lg)
+            .padding(.vertical, AppSpacing.lg)
         }
+        .background(Color.appBackground)
+        .foregroundStyle(Color.appTextPrimary)
+        .navigationTitle("Şifrə bərpası")
+        .navigationBarTitleDisplayMode(.inline)
         .onDisappear {
             viewModel.clear()
         }
@@ -51,7 +56,7 @@ struct ForgotPasswordView: View {
     @ViewBuilder
     var message: some View {
         if let message = viewModel.successMessage, !message.isEmpty {
-            HStack(alignment: .top, spacing: 12) {
+            HStack(alignment: .top, spacing: AppSpacing.controlVertical) {
                 Image(systemName: "checkmark.circle.fill")
                     .font(.title3)
                     .foregroundStyle(Color.appSuccess)
@@ -61,18 +66,17 @@ struct ForgotPasswordView: View {
                     .foregroundStyle(Color.appTextPrimary)
                     .fixedSize(horizontal: false, vertical: true)
             }
-            .padding(16)
+            .padding(AppSpacing.md)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background {
-                RoundedRectangle(cornerRadius: 12)
+                RoundedRectangle(cornerRadius: AppRadius.message)
                     .fill(Color.appSuccess.opacity(0.1))
             }
             .overlay {
-                RoundedRectangle(cornerRadius: 12)
+                RoundedRectangle(cornerRadius: AppRadius.message)
                     .stroke(Color.appSuccess.opacity(0.25), lineWidth: 1)
             }
             .foregroundStyle(Color.appSuccess)
-            .opacity(0.2)
         }
     }
 }

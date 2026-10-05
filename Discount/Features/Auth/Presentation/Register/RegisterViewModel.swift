@@ -13,7 +13,7 @@ final class RegisterViewModel {
     var name: String = ""
     var email: String = ""
     var password: String = ""
-    var userRole: String
+    let userRole: String
 
     private(set) var state: ViewState = .idle
 
@@ -30,7 +30,7 @@ final class RegisterViewModel {
     }
 
     var isFormValid: Bool {
-        !name.trimmingCharacters(in: .whitespaces).isEmpty &&
+        !name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty &&
             validate(email: email, password: password).isValid
     }
 
@@ -51,20 +51,27 @@ final class RegisterViewModel {
             state = .error(validation.message)
             return
         }
+        guard !name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+            state = .error("Ad daxil edilməlidir.")
+            return
+        }
+        guard AccountType(rawValue: userRole) != nil else {
+            state = .error(AccountTypeError.unsupportedValue(userRole).localizedDescription)
+            return
+        }
         state = .loading
 
-        defer {
-            state = .loaded
-        }
-
         do {
-            try await sessionStore.register(name: name, email: email, password: password, role: userRole)
+            try await sessionStore.register(
+                name: name.trimmingCharacters(in: .whitespacesAndNewlines),
+                email: email.trimmingCharacters(in: .whitespacesAndNewlines),
+                password: password,
+                role: userRole
+            )
+            state = .loaded
             appState.loginCompleted()
         } catch {
             state = .error(error.localizedDescription)
         }
     }
-    
-
-    
 }

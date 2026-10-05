@@ -32,7 +32,7 @@ struct RegisterView: View {
         @Bindable var viewModel = viewModel
 
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
+            VStack(alignment: .leading, spacing: AppSpacing.md) {
                 header
                 fields(
                     name: $viewModel.name,
@@ -44,9 +44,12 @@ struct RegisterView: View {
                         .frame(maxWidth: .infinity, alignment: .center)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal, 20)
-            .padding(.vertical, 24)
+            .disabled(viewModel.isLoading)
+            .padding(.horizontal, AppSpacing.screenHorizontal)
+            .padding(.vertical, AppSpacing.lg)
         }
+        .background(Color.appBackground)
+        .foregroundStyle(Color.appTextPrimary)
         .scrollDismissesKeyboard(.interactively)
         .navigationTitle("Qeydiyyat")
         .navigationBarTitleDisplayMode(.inline)
@@ -68,7 +71,7 @@ struct RegisterView: View {
 
 private extension RegisterView {
     var header: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: AppSpacing.sm) {
             Text(isPersonalAccount ? "ŞƏXSİ HESAB" : "BİZNES HESAB")
                 .font(AppTypography.largeTitle)
 
@@ -76,7 +79,7 @@ private extension RegisterView {
                 .font(AppTypography.title)
 
             Text("Kəşf hesabınla fürsətlər bir addım yaxındadır.")
-                .font(AppTypography.font(size: 16, weight: .regular))
+                .font(AppTypography.body)
         }
     }
 
@@ -85,7 +88,7 @@ private extension RegisterView {
         email: Binding<String>,
         password: Binding<String>
     ) -> some View {
-        VStack(spacing: 12) {
+        VStack(spacing: AppSpacing.controlVertical) {
             InputField(
                 title: isPersonalAccount ? "Ad və soyad" : "Biznes adı",
                 placeholder: isPersonalAccount ? "Adın və soyadın" : "Biznesin adı",
@@ -103,7 +106,7 @@ private extension RegisterView {
 
             InputField(
                 title: "Şifrə",
-                placeholder: "Ən az 8 simvol",
+                placeholder: "Ən az 6 simvol",
                 type: .password,
                 text: password,
                 errorMessage: nil
@@ -111,36 +114,16 @@ private extension RegisterView {
         }
     }
 
-    // MARK: State-driven section (error + button)
-
-    @ViewBuilder
     var statusSection: some View {
-        switch viewModel.state {
-        case .idle, .loaded, .empty:
-            registerButton(title: "Qeydiyyat")
-
-        case .loading:
-            registerButton(title: "Qeydiyyat edilir...")
-                .disabled(true)
-            HStack {
-                Spacer()
-                ProgressView()
-                Spacer()
+        VStack(alignment: .leading, spacing: AppSpacing.sm) {
+            if !viewModel.errorMessage.isEmpty {
+                Text(viewModel.errorMessage)
+                    .font(AppTypography.body)
+                    .foregroundStyle(Color.appDanger)
+                    .fixedSize(horizontal: false, vertical: true)
             }
-
-        case let .error(message):
-            Text(message)
-                .font(.callout)
-                .foregroundStyle(Color.appDanger)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            registerButton(title: "Qeydiyyat")
-        }
-    }
-
-    func registerButton(title: String) -> some View {
-        PrimaryButton(title: title) {
-            Task {
-                await viewModel.register(appState: appState)
+            PrimaryButton(title: "Qeydiyyat", isLoading: viewModel.isLoading) {
+                Task { await viewModel.register(appState: appState) }
             }
         }
     }

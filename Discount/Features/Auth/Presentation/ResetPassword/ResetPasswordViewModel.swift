@@ -6,36 +6,51 @@
 //
 
 import Foundation
+import Observation
 
 @MainActor
 @Observable
 final class ResetPasswordViewModel {
-    private var token = ""
-    var password = ""
-    private(set) var errorMessage: String?
-
-    private(set) var isLoading = false
-
+    private let token: String
     private let sessionStore: SessionStore
+    var password = ""
+    private(set) var state: ViewState = .idle
+    private(set) var successMessage: String?
 
-    init(sessionStore: SessionStore) {
+    init(sessionStore: SessionStore, token: String) {
         self.sessionStore = sessionStore
+        self.token = token.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
-    var isFormValid: Bool {
-        !password.trimmingCharacters(in: .whitespaces).isEmpty
+    var isLoading: Bool { state == .loading }
+    var errorMessage: String? {
+        if case let .error(message) = state { return message }
+        return nil
     }
+    var isFormValid: Bool { !token.isEmpty && password.count >= 6 }
 
     func resetPassword() async {
-        errorMessage = nil
-
-        isLoading = true
-        defer { isLoading = false }
-
+        guard !isLoading else { return }
+        successMessage = nil
+        guard !token.isEmpty else {
+            state = .error("Şifrə bərpa tokeni tapılmadı. Yeni bərpa linki istə.")
+            return
+        }
+        guard password.count >= 6 else {
+            state = .error("Şifrə ən azı 6 simvol olmalıdır.")
+            return
+        }
+        state = .loading
         do {
-            try await sessionStore.resetPassword(token: token, password: password.trimmingCharacters(in: .whitespacesAndNewlines))
+            let response = try await sessionStore.resetPassword(token: token, password: password)
+            guard response.data.success else {
+                state = .error(response.data.message)
+                return
+            }
+            successMessage = response.data.message
+            state = .loaded
         } catch {
-            errorMessage = error.localizedDescription
+            state = .error(error.localizedDescription)
         }
     }
 }

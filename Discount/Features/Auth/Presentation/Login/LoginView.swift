@@ -23,7 +23,7 @@ struct LoginView: View {
 
         NavigationStack {
             ScrollView {
-                VStack(spacing: 16) {
+                VStack(spacing: AppSpacing.md) {
                     header
                     accountTypePicker(selection: $viewModel.selectedAccountType)
                     fields(email: $viewModel.email, password: $viewModel.password)
@@ -31,8 +31,11 @@ struct LoginView: View {
                     statusSection
                     registerLink
                 }
-                .padding()
+                .disabled(viewModel.isLoading)
+                .padding(AppSpacing.md)
             }
+            .background(Color.appBackground)
+            .foregroundStyle(Color.appTextPrimary)
             .scrollDismissesKeyboard(.interactively)
             .navigationTitle("Giriş")
         }
@@ -44,8 +47,7 @@ struct LoginView: View {
 private extension LoginView {
     var header: some View {
         Text("\(viewModel.selectedAccountType.selectedType) hesabı")
-            .font(.title)
-            .fontWeight(.semibold)
+            .font(AppTypography.title)
     }
 
     func accountTypePicker(selection: Binding<AccountType>) -> some View {
@@ -87,33 +89,17 @@ private extension LoginView {
         }
     }
 
-    // MARK: State-driven section (error + button)
-
-    @ViewBuilder
     var statusSection: some View {
-        switch viewModel.state {
-        case .idle, .loaded, .empty:
-            loginButton(title: "Daxil ol")
-
-        case .loading:
-            loginButton(title: "Daxil olunur...")
-                .disabled(true)
-            ProgressView()
-
-        case let .error(message):
-            Text(message)
-                .font(.callout)
-                .foregroundStyle(Color.appDanger)
-                .multilineTextAlignment(.center)
-                .frame(maxWidth: .infinity)
-            loginButton(title: "Daxil ol")
-        }
-    }
-
-    func loginButton(title: String) -> some View {
-        PrimaryButton(title: title, borderColor: .appBorder) {
-            Task {
-                await viewModel.login(appState: appState)
+        VStack(spacing: AppSpacing.sm) {
+            if let message = viewModel.errorMessage {
+                Text(message)
+                    .font(AppTypography.body)
+                    .foregroundStyle(Color.appDanger)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            PrimaryButton(title: "Daxil ol", isLoading: viewModel.isLoading) {
+                Task { await viewModel.login(appState: appState) }
             }
         }
     }

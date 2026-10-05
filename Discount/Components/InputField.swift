@@ -28,35 +28,45 @@ struct InputField: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: AppSpacing.sm) {
             Text(title)
-            VStack(alignment: .leading, spacing: 6){
-                HStack {
+                .font(AppTypography.body)
+            VStack(alignment: .leading, spacing: AppSpacing.sm){
+                HStack(spacing: AppSpacing.sm) {
+                    if let icon {
+                        Image(systemName: icon)
+                            .foregroundStyle(Color.appTextSecondary)
+                            .accessibilityHidden(true)
+                    }
                     inputField
                         .foregroundStyle(Color.appTextPrimary)
-                        .frame(maxWidth: .infinity, minHeight: 52)
+                        .font(AppTypography.body)
+                        .accessibilityLabel(Text(title))
+                        .frame(maxWidth: .infinity)
                     if type.isSecure {
                         passwordVisibilityButton
                     }
                 }
             }
-            .padding(.horizontal, 16)
-            .frame(height: 52)
+            .padding(.horizontal, AppSpacing.md)
+            .padding(.vertical, AppSpacing.controlVertical)
+            .frame(minHeight: 52)
             .background {
-                RoundedRectangle(cornerRadius: 16)
+                RoundedRectangle(cornerRadius: AppRadius.control)
                     .fill(Color.appCardBackground)
             }
             .overlay {
-                RoundedRectangle(cornerRadius: 16)
+                RoundedRectangle(cornerRadius: AppRadius.control)
                     .stroke(errorMessage == nil ?
                         Color.appBorder :
                         Color.appDanger, lineWidth: 1)
             }
             if let errorMessage {
                 Text(errorMessage)
-                    .font(.caption)
+                    .font(AppTypography.caption)
                     .foregroundStyle(Color.appDanger)
-                    .padding(.horizontal,4)
+                    .padding(.horizontal, AppSpacing.xs)
+                    .fixedSize(horizontal: false, vertical: true)
             }
         }
     }
@@ -85,6 +95,7 @@ struct InputField: View {
                 .foregroundStyle(Color.appTextSecondary)
         }
         .buttonStyle(.plain)
+        .accessibilityLabel(isPasswordVisible ? "Şifrəni gizlət" : "Şifrəni göstər")
     }
 }
 

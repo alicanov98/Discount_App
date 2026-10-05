@@ -30,7 +30,7 @@ extension AuthEndpoint: Endpoint {
         case .forgetPassword:
             return "auth/forgot-password"
         case .resetPassword:
-            return "/auth/reset-password"
+            return "auth/reset-password"
         }
     }
 
