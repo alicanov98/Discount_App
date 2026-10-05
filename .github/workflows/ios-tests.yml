@@ -16,14 +16,42 @@ jobs:
 
       - name: Select Xcode
         run: |
-          sudo xcode-select -switch /Applications/Xcode.app
+          sudo xcode-select --switch /Applications/Xcode_26.2.app/Contents/Developer
           xcodebuild -version
+
+      - name: Select compatible iPhone simulator
+        id: simulator
+        shell: bash
+        run: |
+          xcodebuild -showdestinations \
+            -project Discount.xcodeproj \
+            -scheme Discount > destinations.txt
+
+          cat destinations.txt
+
+          SIMULATOR_ID=$(python3 - <<'PY'
+          import re
+          from pathlib import Path
+
+          destinations = Path("destinations.txt").read_text()
+          for line in destinations.splitlines():
+              if "platform:iOS Simulator," in line and "name:iPhone" in line:
+                  match = re.search(r"id:([0-9A-Fa-f-]{36})", line)
+                  if match:
+                      print(match.group(1))
+                      break
+          else:
+              raise SystemExit("Layihəyə uyğun iPhone simulatoru tapılmadı.")
+          PY
+          )
+
+          echo "id=$SIMULATOR_ID" >> "$GITHUB_OUTPUT"
 
       - name: Run tests
         run: |
           xcodebuild test \
             -project Discount.xcodeproj \
             -scheme Discount \
-            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
+            -destination 'platform=iOS Simulator,id=${{ steps.simulator.outputs.id }}' \
             -derivedDataPath .build/DerivedData \
             CODE_SIGNING_ALLOWED=NO
