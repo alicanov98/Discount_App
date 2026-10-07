@@ -9,7 +9,7 @@ import Foundation
 
 enum APIConfig {
 
-    static var baseURL: URL? {
+    nonisolated static var baseURL: URL? {
      #if DEBUG
         URL(string: "https://discoundback.alicanov.dev")
      #else

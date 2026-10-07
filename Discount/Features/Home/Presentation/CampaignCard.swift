@@ -14,23 +14,13 @@ struct CampaignArtwork: View {
     var body: some View {
         GeometryReader {
             geometry in
-            let url = ImageURLBuilder.makeURL(path: campaign.imageURL)
-
-            Group {
-                if let url {
-                    WebImage(url: url) { phase in
-                        switch phase {
-                        case .success(let image):
-                            image.resizable().scaledToFill()
-                        case .empty:
-                            Color.appPrimarySoft
-                                .overlay { ProgressView() }
-                        case .failure:
-                            fallback
-                        }
-                    }
-                    .id(url)
-                } else {
+            AppImage(source: campaign.imageURL) { phase in
+                switch phase {
+                case .success(let image):
+                    image.resizable().scaledToFill()
+                case .empty:
+                    Color.appPrimarySoft.overlay { ProgressView() }
+                case .failure:
                     fallback
                 }
             }

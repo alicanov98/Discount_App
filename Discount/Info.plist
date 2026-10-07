@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Olduğun yerdən 5 km ətrafındakı endirim kampaniyalarını xəritədə göstərmək üçün məkanın istifadə olunur.</string>
+	<string>Olduğun şəhər və rayonu ana səhifədə, yaxınlıqdakı endirim kampaniyalarını isə xəritədə göstərmək üçün məkanın istifadə olunur.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Inter-Regular.ttf</string>

@@ -122,3 +122,75 @@ struct Campaign: Decodable, Identifiable, Hashable {
         case isPro = "is_pro", isBoosted = "is_boosted"
     }
 }
+
+#if DEBUG
+extension Campaign {
+    static let mock = mockData[0]
+
+    static let mockData: [Campaign] = [
+        Campaign(
+            id: 1,
+            businessID: 101,
+            businessName: "Coffee House",
+            title: "Bütün qəhvələrə 20% endirim",
+            description: "Sevdiyin qəhvəni daha sərfəli qiymətə al.",
+            imageURL: "https://m.media-amazon.com/images/I/51Z58VM9BaL._AC_SX679_.jpg",
+            terms: "Endirim yalnız yerində sifarişlərə aiddir.",
+            categoryID: 1,
+            discountType: "percentage",
+            discountValue: 20,
+            startDate: "2026-10-01",
+            endDate: "2026-10-31",
+            latitude: 40.3713,
+            longitude: 49.8374,
+            address: "Bakı, Nizami küçəsi 45",
+            status: "active",
+            isPro: true,
+            isBoosted: true,
+            distance: 0.8
+        ),
+        Campaign(
+            id: 2,
+            businessID: 102,
+            businessName: "Sport Store",
+            title: "İdman ayaqqabılarına 30 ₼ endirim",
+            description: "Seçilmiş idman ayaqqabılarında xüsusi fürsət.",
+            imageURL: nil,
+            terms: "100 ₼ və daha yüksək məbləğli alışlara aiddir.",
+            categoryID: 2,
+            discountType: "fixed",
+            discountValue: 30,
+            startDate: "2026-10-05",
+            endDate: "2026-11-05",
+            latitude: 40.4000,
+            longitude: 49.8500,
+            address: "Bakı, Azadlıq prospekti 88",
+            status: "active",
+            isPro: false,
+            isBoosted: false,
+            distance: 2.4
+        ),
+        Campaign(
+            id: 3,
+            businessID: 103,
+            businessName: "Style Boutique",
+            title: "Payız kolleksiyasına 50% endirim",
+            description: "Geyim və aksesuarlarda mövsüm fürsətlərini kəşf et.",
+            imageURL: nil,
+            terms: "Stoklarla məhdudlaşır.",
+            categoryID: 3,
+            discountType: "percentage",
+            discountValue: 50,
+            startDate: "2026-10-01",
+            endDate: "2026-10-20",
+            latitude: 40.3777,
+            longitude: 49.8920,
+            address: "Bakı, Xətai prospekti 15",
+            status: "active",
+            isPro: true,
+            isBoosted: false,
+            distance: nil
+        )
+    ]
+}
+#endif

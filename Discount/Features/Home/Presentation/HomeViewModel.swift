@@ -20,12 +20,17 @@ struct HomeCampaignSection: Identifiable {
 @MainActor
 @Observable
 final class HomeViewModel {
+    private static let heroCardLimit = 10
+    private static let sectionCardLimit = 2
     private let sessionStore: SessionStore
     private let homeRepository: any HomeRepositoryProtocol
+    private let locationService = HomeLocationService()
+    private var headerDate = Date()
     private(set) var state: ViewState = .idle
     private(set) var categories: [CampaignCategory] = []
     private(set) var sections: [HomeCampaignSection] = []
     private(set) var errorMessage: String?
+    private(set) var hasLoaded = false
     var user: User? {
         sessionStore.currentUser
     }
@@ -34,9 +39,54 @@ final class HomeViewModel {
         state == .loading
     }
 
+    var showsInitialLoading: Bool {
+        !hasLoaded && isLoading
+    }
+
+    var greeting: String {
+        HomeHeaderFormatting.greeting(name: user?.name, date: headerDate)
+    }
+
+    var locationTitle: String {
+        locationService.title
+    }
+
+    func monitorHeader() async {
+        headerDate = Date()
+        locationService.start()
+        defer { locationService.stop() }
+        while !Task.isCancelled {
+            do {
+                try await Task.sleep(for: .seconds(60))
+            } catch { return }
+            headerDate = Date()
+        }
+    }
+
+    var heroCampaigns: [Campaign] {
+        Array((sections.first { $0.id == "latest" }?.campaigns ?? []).prefix(Self.heroCardLimit))
+    }
+
+    var visibleSections: [HomeCampaignSection] {
+        sections.filter { $0.id != "latest" && !$0.campaigns.isEmpty }.map { section in
+            var visibleSection = section
+            visibleSection.campaigns = Array(section.campaigns.prefix(Self.sectionCardLimit))
+            return visibleSection
+        }
+    }
+
+    func query(for category: CampaignCategory) -> CampaignQuery {
+        CampaignQuery(categoryID: category.id)
+    }
+
     init(sessionStore: SessionStore, homeRepository: any HomeRepositoryProtocol) {
         self.sessionStore = sessionStore
         self.homeRepository = homeRepository
+    }
+
+    func loadIfNeeded() async {
+        guard !hasLoaded else { return }
+        await load()
     }
 
     func load() async {
@@ -46,8 +96,9 @@ final class HomeViewModel {
         state = .loading
         errorMessage = nil
         defer {
-            state = sections.isEmpty ? .empty : .loaded
+            state = hasLoaded ? (sections.isEmpty ? .empty : .loaded) : .idle
         }
+        var loadedCategories = categories
         do {
             let profile: User
             do {
@@ -66,7 +117,7 @@ final class HomeViewModel {
             errorMessage = error.localizedDescription
         }
         do {
-            categories = try await homeRepository.categories()
+            loadedCategories = try await homeRepository.categories()
 
         } catch {
             if Task.isCancelled {
@@ -74,14 +125,18 @@ final class HomeViewModel {
             }
             errorMessage = error.localizedDescription
         }
-        let geo = CampaignQuery(latitude: user?.latitude, longitude: user?.longitude, limit: 3)
+        let geo = CampaignQuery(
+            latitude: user?.latitude, longitude: user?.longitude, limit: Self.sectionCardLimit
+        )
         var featured = geo
         featured.isPro = true
         var best = geo
         best.sort = .highestDiscount
         var ending = geo
         ending.sort = .endingSoon
-        sections = [
+        var latest = geo
+        latest.limit = Self.heroCardLimit
+        var loadedSections: [HomeCampaignSection] = [
             .init(
                 id: "featured",
                 title: "Ön sıradakı fürsətlər",
@@ -104,13 +159,13 @@ final class HomeViewModel {
                 id: "latest",
                 title: "Təzə-təzə gəldi",
                 subtitle: "Ən son əlavə olunan təkliflər",
-                query: geo
-            )
+                query: latest
+            ),
         ]
         if geo.latitude != nil, geo.longitude != nil {
             var nearby = geo
             nearby.radius = 5
-            sections.insert(
+            loadedSections.insert(
                 .init(
                     id: "nearby",
                     title: "Bir addımlığında",
@@ -120,10 +175,10 @@ final class HomeViewModel {
                 at: 1
             )
         }
-        for category in categories where user?.interests.contains(category.slug) == true {
+        for category in loadedCategories where user?.interests.contains(category.slug) == true {
             var query = geo
             query.categoryID = category.id
-            sections.append(
+            loadedSections.append(
                 .init(
                     id: "interest-\(category.id)",
                     title: "Sənin üçün: \(category.displayName)",
@@ -132,18 +187,22 @@ final class HomeViewModel {
                 )
             )
         }
-        for index in sections.indices {
+        for index in loadedSections.indices {
             do {
-                sections[index].campaigns =
+                loadedSections[index].campaigns =
                     try await homeRepository
-                        .campaigns(sections[index].query).data
+                        .campaigns(loadedSections[index].query).data
 
             } catch {
                 if Task.isCancelled {
                     return
                 }
-                sections[index].error = error.localizedDescription
+                loadedSections[index].error = error.localizedDescription
             }
         }
+        guard !Task.isCancelled else { return }
+        categories = loadedCategories
+        sections = loadedSections
+        hasLoaded = true
     }
 }

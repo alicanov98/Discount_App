@@ -5,8 +5,8 @@
 //  Created by Malik Alijanov on 17.09.26.
 //
 
-import SwiftUI
 import SDWebImageSwiftUI
+import SwiftUI
 
 struct ProfileView: View {
     @State private var viewModel: ProfileViewModel
@@ -190,20 +190,15 @@ struct ProfileView: View {
                     .font(AppTypography.title)
                     .foregroundStyle(Color.appPrimary)
 
-                if let url = ImageURLBuilder.makeURL(path: viewModel.business?.logoURL)
-                {
-                    WebImage(url: url) { phase in
-                        switch phase {
-                        case .success(let image):
-                            image.resizable().scaledToFill()
-                        case .empty:
-                            Color.appPrimarySoft
-                                .overlay { ProgressView() }
-                        case .failure:
-                            Color.appTransparent
-                        }
+                AppImage(source: viewModel.business?.logoURL) { phase in
+                    switch phase {
+                    case let .success(image):
+                        image.resizable().scaledToFill()
+                    case .empty:
+                        Color.appPrimarySoft.overlay { ProgressView() }
+                    case .failure:
+                        Color.appTransparent
                     }
-                    .id(url)
                 }
             }
             .frame(width: 76, height: 76)
@@ -244,7 +239,6 @@ struct ProfileView: View {
 
     private var accountActions: some View {
         card(title: "Hesab", symbol: "person.crop.circle") {
-
             logoutButton
 
             Divider()
