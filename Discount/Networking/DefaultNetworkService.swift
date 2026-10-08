@@ -7,11 +7,14 @@
 
 import Foundation
 
+@MainActor
 final class DefaultNetworkService: NetworkServiceProtocol {
 
     private let session: URLSession
     private let tokenStore: any TokenStore
     private let decoder: JSONDecoder
+    private var refreshTask: Task<Void, Error>?
+    var onSessionExpired: (() -> Void)?
 
     init(
         session: URLSession = .shared,
@@ -54,6 +57,66 @@ final class DefaultNetworkService: NetworkServiceProtocol {
 private extension DefaultNetworkService {
 
     func performRequest(
+        _ endpoint: any Endpoint
+    ) async throws -> Data {
+        let accessToken = tokenStore.accessToken
+        do {
+            return try await sendRequest(endpoint)
+        } catch NetworkError.unauthorized where endpoint.requiresAuthorization {
+            if tokenStore.accessToken == accessToken {
+                try await refreshAccessToken()
+            }
+            try Task.checkCancellation()
+            return try await sendRequest(endpoint)
+        }
+    }
+
+    func refreshAccessToken() async throws {
+        if let refreshTask {
+            try await refreshTask.value
+            return
+        }
+        guard let refreshToken = tokenStore.refreshToken, !refreshToken.isEmpty else {
+            try? tokenStore.clearTokens()
+            onSessionExpired?()
+            throw NetworkError.refreshTokenNotFound
+        }
+        let accessToken = tokenStore.accessToken
+        let task = Task { @MainActor in
+            do {
+                let data = try await self.sendRequest(
+                    AuthEndpoint.refresh(RefreshTokenRequest(refreshToken: refreshToken))
+                )
+                let response = try self.decoder.decode(RefreshTokenResponse.self, from: data)
+                guard self.tokenStore.refreshToken == refreshToken,
+                      self.tokenStore.accessToken == accessToken else {
+                    throw CancellationError()
+                }
+                try self.tokenStore.saveTokens(
+                    accessToken: response.data.accessToken,
+                    refreshToken: response.data.refreshToken
+                )
+            } catch {
+                if self.tokenStore.refreshToken == refreshToken,
+                   self.tokenStore.accessToken == accessToken {
+                    switch error {
+                    case NetworkError.unauthorized,
+                         NetworkError.serverError(statusCode: 403, code: _, message: _, requestID: _):
+                        try? self.tokenStore.clearTokens()
+                        self.onSessionExpired?()
+                    default:
+                        break 
+                    }
+                }
+                throw error
+            }
+        }
+        refreshTask = task
+        defer { refreshTask = nil }
+        try await task.value
+    }
+
+    func sendRequest(
         _ endpoint: any Endpoint
     ) async throws -> Data {
         let request = try makeRequest(for: endpoint)

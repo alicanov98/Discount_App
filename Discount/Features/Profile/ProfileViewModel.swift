@@ -100,16 +100,12 @@ final class ProfileViewModel {
         }
 
         do {
-            let profile = try await authorized {
-                try await self.repository.me()
-            }
+            let profile = try await repository.me()
 
             var businessProfile: BusinessProfile?
 
             if profile.role == "business" {
-                businessProfile = try await authorized {
-                    try await self.repository.business()
-                }
+                businessProfile = try await repository.business()
             }
 
             try Task.checkCancellation()
@@ -181,9 +177,7 @@ final class ProfileViewModel {
 
             if isBusiness {
                 let request = try edited.businessRequest(section: section)
-                let updated = try await authorized {
-                    try await self.repository.updateBusiness(request)
-                }
+                let updated = try await repository.updateBusiness(request)
 
                 business = updated
                 draft = ProfileDraft(business: updated)
@@ -193,9 +187,7 @@ final class ProfileViewModel {
                 )
             } else {
                 let request = try edited.personalRequest(section: section)
-                let updated = try await authorized {
-                    try await self.repository.update(request)
-                }
+                let updated = try await repository.update(request)
 
                 user = updated
                 draft = ProfileDraft(user: updated)
@@ -232,9 +224,7 @@ final class ProfileViewModel {
 
         do {
             let interests = (editedInterests ?? selectedInterests).sorted()
-            let updated = try await authorized {
-                try await self.repository.updateInterests(interests)
-            }
+            let updated = try await repository.updateInterests(interests)
 
             selectedInterests = Set(updated)
             savedInterests = selectedInterests
@@ -261,9 +251,7 @@ final class ProfileViewModel {
         }
 
         do {
-            try await authorized {
-                try await self.sessionStore.logout()
-            }
+            try await sessionStore.logout()
 
             appState.logoutCompleted()
         } catch {
@@ -283,9 +271,7 @@ final class ProfileViewModel {
         }
 
         do {
-            try await authorized {
-                try await self.repository.deleteAccount()
-            }
+            try await repository.deleteAccount()
 
             defer {
                 appState.logoutCompleted()
@@ -294,17 +280,6 @@ final class ProfileViewModel {
             try sessionStore.clearSession()
         } catch {
             showError(error)
-        }
-    }
-
-    private func authorized<Value>(
-        _ operation: () async throws -> Value
-    ) async throws -> Value {
-        do {
-            return try await operation()
-        } catch NetworkError.unauthorized {
-            try await sessionStore.refresh()
-            return try await operation()
         }
     }
 

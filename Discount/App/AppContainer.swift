@@ -39,6 +39,10 @@ final class AppContainer {
             repository: homeRepository,
              sessionStore: sessionStore
              )
+        networkService.onSessionExpired = { [weak sessionStore, weak appState] in
+            try? sessionStore?.clearSession()
+            appState?.logoutCompleted()
+        }
     }
 
     func makeHomeViewModel() -> HomeViewModel {

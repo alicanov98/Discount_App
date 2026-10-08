@@ -62,7 +62,7 @@ struct HomeView: View {
                         .font(AppTypography.body)
                         .foregroundStyle(Color.appTextSecondary)
                     Text("Fürsətləri kəşf et")
-                        .font(AppTypography.largeTitle)
+                        .font(AppTypography.sectionTitle)
                         .foregroundStyle(Color.appTextPrimary)
                         .fixedSize(horizontal: false, vertical: true)
                 }
@@ -101,7 +101,7 @@ struct HomeView: View {
                 .foregroundStyle(Color.appTextSecondary)
 
             HStack(spacing: 8) {
-                Image(systemName: "mappin.circle.fill")
+                Image(systemName: "location.fill")
                     .font(.system(size: 20, weight: .semibold))
                 Text(viewModel.locationTitle)
                     .font(AppTypography.font(size: 18, weight: .semiBold))

@@ -100,14 +100,7 @@ final class HomeViewModel {
         }
         var loadedCategories = categories
         do {
-            let profile: User
-            do {
-                profile = try await homeRepository.me()
-
-            } catch NetworkError.unauthorized {
-                try await sessionStore.refresh()
-                profile = try await homeRepository.me()
-            }
+            let profile = try await homeRepository.me()
             sessionStore.currentUser = profile
 
         } catch {

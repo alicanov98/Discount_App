@@ -83,9 +83,13 @@ extension SessionStore {
             #if DEBUG
                 print("Server error", error.localizedDescription)
             #endif
-            try? tokenStore.clearTokens()
-            currentUser = nil
-            isAuthenticated = false
+            switch error {
+            case NetworkError.unauthorized,
+                 NetworkError.serverError(statusCode: 403, code: _, message: _, requestID: _):
+                try? clearSession()
+            default:
+                break
+            }
             throw error
         }
     }
