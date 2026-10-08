@@ -39,9 +39,7 @@ struct ProfileView: View {
                     sectionMenu
                     accountActions
                 } else if viewModel.operation == .loading {
-                    ProgressView("Profil yüklənir…")
-                        .frame(maxWidth: .infinity)
-                        .padding(30)
+                    AppLoadingView()
                 } else {
                     CampaignErrorView(
                         message: viewModel.errorMessage
@@ -55,8 +53,10 @@ struct ProfileView: View {
                     logoutButton
                 }
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(20)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.appBackground)
         .navigationTitle(viewModel.isBusiness ? "Biznes profili" : "Profilim")
         .navigationBarTitleDisplayMode(.inline)
@@ -195,7 +195,10 @@ struct ProfileView: View {
                     case let .success(image):
                         image.resizable().scaledToFill()
                     case .empty:
-                        Color.appPrimarySoft.overlay { ProgressView() }
+                        Color.appPrimarySoft.overlay {
+                            AppLoadingView(placement: .inline)
+                                .font(AppTypography.caption)
+                        }
                     case .failure:
                         Color.appTransparent
                     }
@@ -266,12 +269,11 @@ struct ProfileView: View {
         } label: {
             HStack(spacing: 10) {
                 if viewModel.operation == .loggingOut {
-                    ProgressView()
+                    AppLoadingView(placement: .inline)
                 } else {
                     Image(systemName: "rectangle.portrait.and.arrow.right")
+                    Text("Hesabdan çıx")
                 }
-
-                Text("Hesabdan çıx")
             }
             .font(AppTypography.body)
             .frame(maxWidth: .infinity, alignment: .leading)

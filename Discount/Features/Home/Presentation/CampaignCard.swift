@@ -19,7 +19,7 @@ struct CampaignArtwork: View {
                 case .success(let image):
                     image.resizable().scaledToFill()
                 case .empty:
-                    Color.appPrimarySoft.overlay { ProgressView() }
+                    Color.appPrimarySoft.overlay { AppLoadingView(placement: .inline) }
                 case .failure:
                     fallback
                 }

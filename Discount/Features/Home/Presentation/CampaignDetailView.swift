@@ -40,7 +40,7 @@ struct CampaignDetailView: View {
                 .font(AppTypography.title)
                     .foregroundStyle(Color.appPrimary)
                 if isLoading {
-                    ProgressView()
+                    AppLoadingView()
                 }
                 if let errorMessage {
                     CampaignErrorView(message: errorMessage) {

@@ -18,8 +18,7 @@ struct HomeView: View {
     var body: some View {
         ScrollView {
             if viewModel.showsInitialLoading {
-                ProgressView("Fürsətlər yüklənir…")
-                    .frame(maxWidth: .infinity)
+                AppLoadingView()
                     .padding(20)
             } else {
                 VStack(alignment: .leading, spacing: 28) {
@@ -40,6 +39,7 @@ struct HomeView: View {
                 .padding(20)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.appBackground)
         .task {
             await viewModel.loadIfNeeded()

@@ -56,8 +56,7 @@ private struct CampaignResultsView: View {
                     CampaignCard(campaign: $0)
                 }
                 if viewModel.isLoading {
-                    ProgressView()
-                    .frame(maxWidth: .infinity)
+                    AppLoadingView()
                 }
                 if viewModel.canLoadMore {
                     Button("Daha çox göstər") {
@@ -70,8 +69,10 @@ private struct CampaignResultsView: View {
                     .frame(maxWidth: .infinity)
                 }
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(20)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.appBackground)
         .navigationTitle("Təklifləri kəşf et")
         .navigationBarTitleDisplayMode(.inline)

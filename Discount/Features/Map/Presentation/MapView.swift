@@ -136,7 +136,7 @@ struct MapView: View {
                     .focused($searchFocused)
                     .submitLabel(.search)
                     .autocorrectionDisabled()
-                if viewModel.isSearching { ProgressView() }
+                if viewModel.isSearching { AppLoadingView(placement: .inline) }
                 if !searchText.isEmpty {
                     Button { searchText = "" } label: { Image(systemName: "xmark.circle.fill") }
                         .accessibilityLabel("Axtarışı təmizlə")
@@ -191,7 +191,7 @@ struct MapView: View {
                 Divider()
             }
             HStack {
-                if viewModel.isLoading { ProgressView() }
+                if viewModel.isLoading { AppLoadingView(placement: .inline) }
                 Label("5 km · \(visibleCampaigns.count) kampaniya", systemImage: "tag.fill")
                     .font(.subheadline.bold())
                 Spacer()
@@ -307,7 +307,7 @@ struct MapView: View {
                         .font(AppTypography.sectionTitle)
                     Text("Xəritədə görünən \(visibleCampaigns.count) kampaniya")
                         .font(AppTypography.caption).foregroundStyle(.secondary)
-                    if viewModel.isLoading { ProgressView("Kampaniyalar yüklənir…") }
+                    if viewModel.isLoading { AppLoadingView() }
                     if let error = viewModel.errorMessage {
                         CampaignErrorView(message: error) { Task { await viewModel.loadNearby() } }
                     }

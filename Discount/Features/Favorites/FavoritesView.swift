@@ -29,7 +29,7 @@ struct FavoritesView: View {
                         }
                     }
                     if favorites.isLoading {
-                        ProgressView("Seçilmişlər yüklənir…")
+                        AppLoadingView()
 
                     } else if favorites.hasLoaded && favorites.campaigns.isEmpty {
                         ContentUnavailableView(
@@ -43,8 +43,10 @@ struct FavoritesView: View {
                     }
                 }
             }
+            .frame(maxWidth: .infinity)
             .padding(20)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.appBackground)
         .navigationTitle("Seçilmişlər")
         .task {
