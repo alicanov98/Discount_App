@@ -37,7 +37,6 @@ struct ForgotPasswordView: View {
                         await viewModel.forgetPassword()
                     }
                 }
-                message
             }
             .disabled(viewModel.isLoading)
             .padding(.horizontal, AppSpacing.lg)
@@ -47,38 +46,16 @@ struct ForgotPasswordView: View {
         .foregroundStyle(Color.appTextPrimary)
         .navigationTitle("Şifrə bərpası")
         .navigationBarTitleDisplayMode(.inline)
+        .successToast(message: Binding(
+            get: { viewModel.successMessage },
+            set: { _ in viewModel.dismissSuccessMessage() }
+        ))
         .onDisappear {
             viewModel.clear()
         }
         .scrollDismissesKeyboard(.interactively)
     }
 
-    @ViewBuilder
-    var message: some View {
-        if let message = viewModel.successMessage, !message.isEmpty {
-            HStack(alignment: .top, spacing: AppSpacing.controlVertical) {
-                Image(systemName: "checkmark.circle.fill")
-                    .font(.title3)
-                    .foregroundStyle(Color.appSuccess)
-
-                Text(message)
-                    .font(AppTypography.sectionTitle)
-                    .foregroundStyle(Color.appTextPrimary)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-            .padding(AppSpacing.md)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background {
-                RoundedRectangle(cornerRadius: AppRadius.message)
-                    .fill(Color.appSuccess.opacity(0.1))
-            }
-            .overlay {
-                RoundedRectangle(cornerRadius: AppRadius.message)
-                    .stroke(Color.appSuccess.opacity(0.25), lineWidth: 1)
-            }
-            .foregroundStyle(Color.appSuccess)
-        }
-    }
 }
 
 #Preview {

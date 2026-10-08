@@ -74,6 +74,10 @@ final class ForgotPasswordViewModel {
         }
     }
 
+    func dismissSuccessMessage() {
+        successMessage = nil
+    }
+
     func clear() {
         generation = UUID()
         email = ""

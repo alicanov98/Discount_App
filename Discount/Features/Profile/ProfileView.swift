@@ -23,18 +23,6 @@ struct ProfileView: View {
             LazyVStack(alignment: .leading, spacing: 22) {
                 identity
 
-                if let message = viewModel.successMessage {
-                    Label(message, systemImage: "checkmark.circle.fill")
-                        .font(AppTypography.body)
-                        .foregroundStyle(Color.appSuccess)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(16)
-                        .background(
-                            Color.appSuccessBackground,
-                            in: RoundedRectangle(cornerRadius: 16)
-                        )
-                }
-
                 if viewModel.hasLoaded {
                     sectionMenu
                     accountActions
@@ -61,6 +49,10 @@ struct ProfileView: View {
         .navigationTitle(viewModel.isBusiness ? "Biznes profili" : "Profilim")
         .navigationBarTitleDisplayMode(.inline)
         .tint(Color.appPrimary)
+        .successToast(message: Binding(
+            get: { selectedSection == nil ? viewModel.successMessage : nil },
+            set: { viewModel.successMessage = $0 }
+        ))
         .task {
             await viewModel.load()
         }

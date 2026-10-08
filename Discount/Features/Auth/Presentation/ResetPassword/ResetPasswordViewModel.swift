@@ -29,6 +29,10 @@ final class ResetPasswordViewModel {
     }
     var isFormValid: Bool { !token.isEmpty && password.count >= 6 }
 
+    func dismissSuccessMessage() {
+        successMessage = nil
+    }
+
     func resetPassword() async {
         guard !isLoading else { return }
         successMessage = nil

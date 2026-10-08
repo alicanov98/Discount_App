@@ -16,7 +16,6 @@ struct ProfileEditorView: View {
     @State private var savedDraft: ProfileDraft
     @State private var selectedInterests: Set<String>
     @State private var savedInterests: Set<String>
-    @State private var saveMessage: String?
 
     init(
         viewModel: ProfileViewModel,
@@ -35,24 +34,9 @@ struct ProfileEditorView: View {
     }
 
     var body: some View {
+        @Bindable var viewModel = viewModel
         ScrollView {
             VStack(alignment: .leading, spacing: 22) {
-                if let saveMessage {
-                    Label(
-                        saveMessage,
-                        systemImage: "checkmark.circle.fill"
-                    )
-                    .font(AppTypography.body)
-                    .foregroundStyle(Color.appSuccess)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(16)
-                    .background(
-                        Color.appSuccessBackground,
-                        in: RoundedRectangle(cornerRadius: 16)
-                    )
-                    .accessibilityIdentifier("profile-save-success")
-                }
-
                 sectionFields
                     .disabled(viewModel.isBusy)
 
@@ -79,6 +63,7 @@ struct ProfileEditorView: View {
         .navigationTitle(section.title(isBusiness: viewModel.isBusiness))
         .navigationBarTitleDisplayMode(.inline)
         .tint(Color.appPrimary)
+        .successToast(message: $viewModel.successMessage)
         .alert(
             "Xəta baş verdi",
             isPresented: Binding(
@@ -108,13 +93,10 @@ struct ProfileEditorView: View {
     }
 
     private func save() async {
-        saveMessage = nil
-
         if section == .interests {
             if await viewModel.saveInterests(selectedInterests) {
                 selectedInterests = Set(viewModel.user?.interests ?? [])
                 savedInterests = selectedInterests
-                saveMessage = "Maraqların yeniləndi."
             }
         } else if await viewModel.saveProfile(
             section: section,
@@ -122,7 +104,6 @@ struct ProfileEditorView: View {
         ) {
             draft = viewModel.draft
             savedDraft = draft
-            saveMessage = "Dəyişikliklər saxlanıldı."
         }
     }
 

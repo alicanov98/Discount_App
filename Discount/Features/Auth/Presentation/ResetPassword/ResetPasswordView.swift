@@ -31,12 +31,6 @@ struct ResetPasswordView: View {
                 PrimaryButton(title: "Şifrəni yenilə", isLoading: viewModel.isLoading) {
                     Task { await viewModel.resetPassword() }
                 }
-                if let message = viewModel.successMessage {
-                    Text(message)
-                        .font(AppTypography.body)
-                        .foregroundStyle(Color.appSuccess)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
             }
             .disabled(viewModel.isLoading)
             .padding(AppSpacing.lg)
@@ -46,6 +40,10 @@ struct ResetPasswordView: View {
         .scrollDismissesKeyboard(.interactively)
         .navigationTitle("Yeni şifrə")
         .navigationBarTitleDisplayMode(.inline)
+        .successToast(message: Binding(
+            get: { viewModel.successMessage },
+            set: { _ in viewModel.dismissSuccessMessage() }
+        ))
     }
 }
 
