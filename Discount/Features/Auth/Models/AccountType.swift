@@ -17,8 +17,8 @@ enum AccountType: String, CaseIterable, Identifiable {
 
     var selectedType: String {
         switch self {
-        case .user: "Şəxsi"
-        case .business: "Biznes"
+        case .user: AppLocalization.string("Şəxsi")
+        case .business: AppLocalization.string("Biznes")
         }
     }
 }

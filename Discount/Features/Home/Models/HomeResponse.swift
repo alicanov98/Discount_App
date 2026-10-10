@@ -37,15 +37,15 @@ struct CampaignCategory: Decodable, Identifiable, Hashable {
     let name: String
     var displayName: String {
         switch slug {
-        case "fashion": "Moda"
-        case "electronics": "Elektronika"
-        case "food": "Yemək və içki"
-        case "beauty": "Gözəllik"
-        case "sports": "İdman"
-        case "entertainment": "Əyləncə"
-        case "home": "Ev və yaşam"
-        case "travel": "Səyahət"
-        case "market": "Market"
+        case "fashion": AppLocalization.string("Moda")
+        case "electronics": AppLocalization.string("Elektronika")
+        case "food": AppLocalization.string("Yemək və içki")
+        case "beauty": AppLocalization.string("Gözəllik")
+        case "sports": AppLocalization.string("İdman")
+        case "entertainment": AppLocalization.string("Əyləncə")
+        case "home": AppLocalization.string("Ev və yaşam")
+        case "travel": AppLocalization.string("Səyahət")
+        case "market": AppLocalization.string("Market")
         default: name
         }
     }
@@ -93,9 +93,9 @@ struct Campaign: Decodable, Identifiable, Hashable {
                 .fractionLength(0 ... 2)
             ))
         switch discountType {
-        case "percentage": return "\(value)% endirim"
-        case "fixed": return "\(value) ₼ endirim"
-        default: return "Xüsusi təklif"
+        case "percentage": return String(format: AppLocalization.string("%@%% endirim"), value)
+        case "fixed": return String(format: AppLocalization.string("%@ ₼ endirim"), value)
+        default: return AppLocalization.string("Xüsusi təklif")
         }
     }
 
@@ -108,7 +108,7 @@ struct Campaign: Decodable, Identifiable, Hashable {
             return value 
             }
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "az_AZ")
+        formatter.locale = Locale(identifier: UserDefaults.standard.string(forKey: "app.language") ?? "az")
         formatter.dateStyle = .medium
         return formatter.string(from: date)
     }

@@ -14,6 +14,8 @@ import SwiftUI
 
 @main
 struct Discount_App: App {
+    @AppStorage("app.language") private var language: AppLanguage = .azerbaijani
+    @AppStorage("app.appearance") private var appearance: AppAppearance = .system
     @State private var container = AppContainer()
 
     init() {
@@ -25,6 +27,8 @@ struct Discount_App: App {
     var body: some Scene {
         WindowGroup {
             RootView()
+                .environment(\.locale, language.locale)
+                .preferredColorScheme(appearance.colorScheme)
                 .environment(container)
                 .environment(container.appState)
                 .environment(container.sessionStore)

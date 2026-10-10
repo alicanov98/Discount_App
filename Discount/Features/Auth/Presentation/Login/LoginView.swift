@@ -92,7 +92,7 @@ private extension LoginView {
     var statusSection: some View {
         VStack(spacing: AppSpacing.sm) {
             if let message = viewModel.errorMessage {
-                Text(message)
+                Text(LocalizedStringKey(message))
                     .font(AppTypography.body)
                     .foregroundStyle(Color.appDanger)
                     .multilineTextAlignment(.center)

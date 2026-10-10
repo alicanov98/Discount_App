@@ -41,17 +41,17 @@ struct OnboardingView: View {
                                 .accessibilityHidden(true)
 
                             VStack(spacing: 16) {
-                                Text(page.eyebrow)
+                                Text(LocalizedStringKey(page.eyebrow))
                                     .font(AppTypography.caption)
                                     .tracking(2)
                                     .foregroundStyle(Color.appPrimary)
 
-                                Text(page.title)
+                                Text(LocalizedStringKey(page.title))
                                     .font(AppTypography.largeTitle)
                                     .foregroundStyle(Color.appTextPrimary)
                                     .fixedSize(horizontal: false, vertical: true)
 
-                                Text(page.subtitle)
+                                Text(LocalizedStringKey(page.subtitle))
                                     .font(AppTypography.body)
                                     .foregroundStyle(Color.appTextSecondary)
                                     .lineSpacing(5)
@@ -278,7 +278,7 @@ private struct OnboardingArtwork: View {
 
                 Spacer()
 
-                Text(badge)
+                Text(LocalizedStringKey(badge))
                     .font(.system(size: 28, weight: .bold, design: .rounded))
                     .foregroundStyle(Color.appOnPrimary)
                     .padding(12)
@@ -294,11 +294,11 @@ private struct OnboardingArtwork: View {
                 .frame(height: 1)
 
             VStack(alignment: .leading, spacing: 6) {
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .font(.system(size: 19, weight: .semibold))
                     .foregroundStyle(Color.appTextPrimary)
 
-                Text(detail)
+                Text(LocalizedStringKey(detail))
                     .font(.system(size: 12))
                     .foregroundStyle(Color.appTextSecondary)
             }
@@ -343,7 +343,7 @@ private struct OnboardingArtwork: View {
         _ title: String,
         symbol: String
     ) -> some View {
-        Label(title, systemImage: symbol)
+        Label(LocalizedStringKey(title), systemImage: symbol)
             .font(.system(size: 13, weight: .semibold))
             .foregroundStyle(Color.appPrimary)
             .padding(.horizontal, 18)

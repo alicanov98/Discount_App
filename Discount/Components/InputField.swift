@@ -29,7 +29,7 @@ struct InputField: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: AppSpacing.sm) {
-            Text(title)
+            Text(LocalizedStringKey(title))
                 .font(AppTypography.body)
             VStack(alignment: .leading, spacing: AppSpacing.sm){
                 HStack(spacing: AppSpacing.sm) {
@@ -41,7 +41,7 @@ struct InputField: View {
                     inputField
                         .foregroundStyle(Color.appTextPrimary)
                         .font(AppTypography.body)
-                        .accessibilityLabel(Text(title))
+                        .accessibilityLabel(Text(LocalizedStringKey(title)))
                         .frame(maxWidth: .infinity)
                     if type.isSecure {
                         passwordVisibilityButton
@@ -62,7 +62,7 @@ struct InputField: View {
                         Color.appDanger, lineWidth: 1)
             }
             if let errorMessage {
-                Text(errorMessage)
+                Text(LocalizedStringKey(errorMessage))
                     .font(AppTypography.caption)
                     .foregroundStyle(Color.appDanger)
                     .padding(.horizontal, AppSpacing.xs)
@@ -74,10 +74,10 @@ struct InputField: View {
     @ViewBuilder
     private var inputField: some View {
         if type.isSecure && !isPasswordVisible {
-            SecureField(placeholder,text:$text)
+            SecureField(LocalizedStringKey(placeholder),text:$text)
                 .textContentType(type.contnetType)
         }else {
-            TextField(placeholder,text:$text)
+            TextField(LocalizedStringKey(placeholder),text:$text)
                 .textContentType(type.contnetType)
                 .keyboardType(type.keyboardType)
                 .textInputAutocapitalization(

@@ -148,7 +148,7 @@ struct MapView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 0) {
                         if let error = viewModel.searchError {
-                            Text(error).font(.callout).padding()
+                            Text(LocalizedStringKey(error)).font(.callout).padding()
                         }
                         ForEach(Array(viewModel.searchResults.enumerated()), id: \.offset) { _, item in
                             Button { chooseDestination(item) } label: {
@@ -202,7 +202,7 @@ struct MapView: View {
                 Button { returnToMyLocation() } label: { Image(systemName: "location.fill") }
                     .accessibilityLabel("Məkanımı göstər və kampaniyaları yenilə")
             }
-            Text(destination == nil ? "Olduğun məkanın ətrafında" : "Seçdiyin məkanın ətrafında")
+            Text(LocalizedStringKey(destination == nil ? "Olduğun məkanın ətrafında" : "Seçdiyin məkanın ətrafında"))
                 .font(.caption).foregroundStyle(.secondary)
             Button { showCampaignList = true; searchFocused = false } label: {
                 Label("Kampaniyalara siyahıda bax", systemImage: "list.bullet")
@@ -214,7 +214,7 @@ struct MapView: View {
             Text("Məkan seçmək üçün xəritəyə toxun.")
                 .font(.caption).foregroundStyle(.secondary)
             if let message = viewModel.locationMessage, viewModel.selectedArea == nil {
-                Text(message).font(.caption)
+                Text(LocalizedStringKey(message)).font(.caption)
                 if viewModel.permissionDenied {
                     Button("Ayarları aç") {
                         if let url = URL(string: UIApplication.openSettingsURLString) { openURL(url) }
@@ -224,7 +224,7 @@ struct MapView: View {
                     Button("Məkanı yenidən yoxla") { viewModel.start() }.font(.caption)
                 }
             } else if let error = viewModel.errorMessage {
-                Text(error).font(.caption).foregroundStyle(Color.appDanger)
+                Text(LocalizedStringKey(error)).font(.caption).foregroundStyle(Color.appDanger)
                 Button("Yenidən cəhd et") { Task { await viewModel.loadNearby() } }.font(.caption)
             } else if !viewModel.isLoading && viewModel.searchCenter != nil && viewModel.campaigns.isEmpty {
                 Text("5 km ətrafında kampaniya tapılmadı.").font(.caption).foregroundStyle(.secondary)

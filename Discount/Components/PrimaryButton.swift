@@ -29,7 +29,7 @@ struct PrimaryButton: View {
                         .tint(textColor)
                         .accessibilityHidden(true)
                 }
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .font(AppTypography.button)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)

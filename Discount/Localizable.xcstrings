@@ -1,0 +1,5604 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    "%@ – %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ – %2$@"
+          }
+        }
+      }
+    },
+    "%@ · 5 km ətrafında" : {
+
+    },
+    "%@ ₼ endirim" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ ₼ endirim"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ ₼ off"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скидка %@ ₼"
+          }
+        }
+      }
+    },
+    "%@ hesabı" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ hesabı"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ account"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Аккаунт: %@"
+          }
+        }
+      }
+    },
+    "%@ tarixinədək" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ tarixinədək"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Until %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "До %@"
+          }
+        }
+      }
+    },
+    "%@-dək" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@-dək"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Until %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "До %@"
+          }
+        }
+      }
+    },
+    "%@, %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@, %2$@"
+          }
+        }
+      }
+    },
+    "%@, %@. Məlumatı aç" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@, %2$@. Məlumatı aç"
+          }
+        }
+      }
+    },
+    "%@%% endirim" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@%% endirim"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@%% off"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скидка %@%%"
+          }
+        }
+      }
+    },
+    "%lld təklif" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld təklif"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld offers"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld предложений"
+          }
+        }
+      }
+    },
+    "5 km · %lld kampaniya" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5 km · %lld kampaniya"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5 km · %lld campaigns"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5 км · %lld акций"
+          }
+        }
+      }
+    },
+    "5 km ətrafında kampaniya tapılmadı." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5 km ətrafında kampaniya tapılmadı."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No campaigns found within 5 km."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В радиусе 5 км акции не найдены."
+          }
+        }
+      }
+    },
+    "Açıq" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Açıq"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Light"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Светлое"
+          }
+        }
+      }
+    },
+    "Ad daxil edilməlidir." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ad daxil edilməlidir."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter a name."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите имя."
+          }
+        }
+      }
+    },
+    "Ad və e-poçt hesabının profil məlumatlarıdır. Şəxsi və ya biznes məlumatlarını profil səhifəsində yeniləyə bilərsən." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ad və e-poçt hesabının profil məlumatlarıdır. Şəxsi və ya biznes məlumatlarını profil səhifəsində yeniləyə bilərsən."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your name and email are part of your profile. Update your personal or business details from the profile page."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Имя и электронная почта входят в данные профиля. Личные данные или данные бизнеса можно обновить на странице профиля."
+          }
+        }
+      }
+    },
+    "Ad və soyad" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ad və soyad"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Full name"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Имя и фамилия"
+          }
+        }
+      }
+    },
+    "Adın və soyadın" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adın və soyadın"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your full name"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваше имя и фамилия"
+          }
+        }
+      }
+    },
+    "Ana səhifə" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ana səhifə"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Home"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Главная"
+          }
+        }
+      }
+    },
+    "Artıq hesabım var" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Artıq hesabım var"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I already have an account"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "У меня уже есть аккаунт"
+          }
+        }
+      }
+    },
+    "Axşamın xeyir" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Axşamın xeyir"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Good evening"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добрый вечер"
+          }
+        }
+      }
+    },
+    "Axtar" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Axtar"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поиск"
+          }
+        }
+      }
+    },
+    "Axtarışı təmizlə" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Axtarışı təmizlə"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear search"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Очистить поиск"
+          }
+        }
+      }
+    },
+    "Ayarlar" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayarlar"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки"
+          }
+        }
+      }
+    },
+    "Ayarlar → Bildiriş idarəsi keçidini aç. Yaxınlıq, maraqlar və seçilmişlər üzrə seçimlərini dəyişib Dəyişiklikləri saxla düyməsinə toxun." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayarlar → Bildiriş idarəsi keçidini aç. Yaxınlıq, maraqlar və seçilmişlər üzrə seçimlərini dəyişib Dəyişiklikləri saxla düyməsinə toxun."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open Settings → Manage notifications. Change preferences for nearby offers, interests and favorites, then tap Save changes."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Откройте Настройки → Управление уведомлениями. Измените параметры предложений рядом, интересов и избранного, затем нажмите «Сохранить изменения»."
+          }
+        }
+      }
+    },
+    "Ayarları aç" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayarları aç"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open settings"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть настройки"
+          }
+        }
+      }
+    },
+    "Bağla" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bağla"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закрыть"
+          }
+        }
+      }
+    },
+    "Başlayaq" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Başlayaq"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Get started"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Начать"
+          }
+        }
+      }
+    },
+    "Başqa söz və ya kateqoriya ilə axtar." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Başqa söz və ya kateqoriya ilə axtar."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try another search term or category."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Попробуйте другое слово или категорию."
+          }
+        }
+      }
+    },
+    "Bəyəndiklərini saxla.\nSonra rahat tap." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bəyəndiklərini saxla.\nSonra rahat tap."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save what you love.\nFind it easily later."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохраняйте понравившееся.\nНаходите его позже."
+          }
+        }
+      }
+    },
+    "Bəyəndiyin kampaniyalardakı ürək düyməsinə toxun." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bəyəndiyin kampaniyalardakı ürək düyməsinə toxun."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap the favorite button on offers you like."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите кнопку избранного на понравившихся предложениях."
+          }
+        }
+      }
+    },
+    "Bildiriş idarəsi" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bildiriş idarəsi"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manage notifications"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Управление уведомлениями"
+          }
+        }
+      }
+    },
+    "Bildiriş radiusu (km)" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bildiriş radiusu (km)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notification radius (km)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Радиус уведомлений (км)"
+          }
+        }
+      }
+    },
+    "Bildiriş seçimləri" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bildiriş seçimləri"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notification preferences"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки уведомлений"
+          }
+        }
+      }
+    },
+    "Bildiriş seçimlərini necə dəyişə bilərəm?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bildiriş seçimlərini necə dəyişə bilərəm?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How do I change my notification preferences?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как изменить настройки уведомлений?"
+          }
+        }
+      }
+    },
+    "Bildirişi bağla" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bildirişi bağla"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dismiss notification"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закрыть уведомление"
+          }
+        }
+      }
+    },
+    "Bildirişlər" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bildirişlər"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifications"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Уведомления"
+          }
+        }
+      }
+    },
+    "Bir addımlığında" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bir addımlığında"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Right nearby"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Совсем рядом"
+          }
+        }
+      }
+    },
+    "Bir toxunuşla yadda saxla" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bir toxunuşla yadda saxla"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save with one tap"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохраните одним нажатием"
+          }
+        }
+      }
+    },
+    "Bitmək üzrə" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bitmək üzrə"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ending soon"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скоро закончатся"
+          }
+        }
+      }
+    },
+    "Bitmək üzrə olan kampaniyalar" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bitmək üzrə olan kampaniyalar"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Campaigns ending soon"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Акции, которые скоро закончатся"
+          }
+        }
+      }
+    },
+    "Biznes" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biznes"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Business"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бизнес"
+          }
+        }
+      }
+    },
+    "Biznes adı" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biznes adı"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Business name"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Название бизнеса"
+          }
+        }
+      }
+    },
+    "Biznes haqqında" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biznes haqqında"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About the business"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "О бизнесе"
+          }
+        }
+      }
+    },
+    "BİZNES HESAB" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BİZNES HESAB"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "BUSINESS ACCOUNT"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "БИЗНЕС-АККАУНТ"
+          }
+        }
+      }
+    },
+    "Biznes hesabı" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biznes hesabı"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Business account"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Бизнес-аккаунт"
+          }
+        }
+      }
+    },
+    "Biznes məlumatları" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biznes məlumatları"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Business details"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Данные бизнеса"
+          }
+        }
+      }
+    },
+    "Biznes profili" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biznes profili"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Business profile"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Профиль бизнеса"
+          }
+        }
+      }
+    },
+    "Biznesin adı" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biznesin adı"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your business name"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Название вашего бизнеса"
+          }
+        }
+      }
+    },
+    "Biznesin, kampaniyaların və onların statistikası birdəfəlik silinəcək. Bu əməliyyatı geri qaytarmaq mümkün deyil." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biznesin, kampaniyaların və onların statistikası birdəfəlik silinəcək. Bu əməliyyatı geri qaytarmaq mümkün deyil."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your business, campaigns and their statistics will be permanently deleted. This cannot be undone."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваш бизнес, акции и их статистика будут удалены безвозвратно. Это действие нельзя отменить."
+          }
+        }
+      }
+    },
+    "Biznesini qısaca tanıt" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biznesini qısaca tanıt"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Briefly describe your business"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кратко расскажите о своём бизнесе"
+          }
+        }
+      }
+    },
+    "Bölmə" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bölmə"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Section"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Раздел"
+          }
+        }
+      }
+    },
+    "Bu ərazidəki kampaniyaları yenilə" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu ərazidəki kampaniyaları yenilə"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refresh campaigns in this area"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Обновить акции в этой области"
+          }
+        }
+      }
+    },
+    "Burada tapa bilərsən" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Burada tapa bilərsən"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Find it here"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Найти на карте"
+          }
+        }
+      }
+    },
+    "Bütün kateqoriyalar" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bütün kateqoriyalar"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "All categories"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Все категории"
+          }
+        }
+      }
+    },
+    "Cari məkanın · 5 km ətrafında" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cari məkanın · 5 km ətrafında"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your location · within 5 km"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваше местоположение · в радиусе 5 км"
+          }
+        }
+      }
+    },
+    "Daha çox göstər" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daha çox göstər"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show more"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показать ещё"
+          }
+        }
+      }
+    },
+    "Daha çox qənaət et" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daha çox qənaət et"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save more"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Экономьте больше"
+          }
+        }
+      }
+    },
+    "Davam et" : {
+
+    },
+    "Daxil ol" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daxil ol"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign in"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Войти"
+          }
+        }
+      }
+    },
+    "Dəyişiklikləri saxla" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dəyişiklikləri saxla"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save changes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранить изменения"
+          }
+        }
+      }
+    },
+    "Dəyişiklikləri saxlamaq mümkün olmadı." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dəyişiklikləri saxlamaq mümkün olmadı."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your changes could not be saved."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось сохранить изменения."
+          }
+        }
+      }
+    },
+    "Dil" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dil"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Language"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Язык"
+          }
+        }
+      }
+    },
+    "discount." : {
+
+    },
+    "Düzgün e-poçt ünvanı daxil et." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Düzgün e-poçt ünvanı daxil et."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter a valid email address."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите корректный адрес электронной почты."
+          }
+        }
+      }
+    },
+    "E-poçt" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-poçt"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Email"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Электронная почта"
+          }
+        }
+      }
+    },
+    "E-poçt daxil edilməlidir." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-poçt daxil edilməlidir."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please enter an email."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите электронную почту."
+          }
+        }
+      }
+    },
+    "E-poçt daxil edin" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-poçt daxil edin"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter your email"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите электронную почту"
+          }
+        }
+      }
+    },
+    "Elektronika" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elektronika"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Electronics"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Электроника"
+          }
+        }
+      }
+    },
+    "Endirim və kampaniya şərtlərini haradan öyrənim?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Endirim və kampaniya şərtlərini haradan öyrənim?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Where can I find the discount and campaign conditions?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Где узнать скидку и условия акции?"
+          }
+        }
+      }
+    },
+    "Ev və yaşam" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ev və yaşam"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Home and living"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дом и быт"
+          }
+        }
+      }
+    },
+    "Əlavə şərt qeyd edilməyib. Ətraflı məlumatı biznesdən əldə edə bilərsən." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Əlavə şərt qeyd edilməyib. Ətraflı məlumatı biznesdən əldə edə bilərsən."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No additional terms provided. Contact the business for details."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дополнительные условия не указаны. Уточните подробности у компании."
+          }
+        }
+      }
+    },
+    "Əməliyyatı tamamlamaq mümkün olmadı." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Əməliyyatı tamamlamaq mümkün olmadı."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The operation could not be completed."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось выполнить операцию."
+          }
+        }
+      }
+    },
+    "Ən az 6 simvol" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ən az 6 simvol"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "At least 6 characters"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не менее 6 символов"
+          }
+        }
+      }
+    },
+    "Ən son əlavə olunan təkliflər" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ən son əlavə olunan təkliflər"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recently added offers"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Недавно добавленные предложения"
+          }
+        }
+      }
+    },
+    "Ən yenilər" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ən yenilər"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Newest"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Самые новые"
+          }
+        }
+      }
+    },
+    "Ən yüksək endirim" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ən yüksək endirim"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biggest discount"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Самая большая скидка"
+          }
+        }
+      }
+    },
+    "Ən yüksək endirimləri kəşf et" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ən yüksək endirimləri kəşf et"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Discover the biggest discounts"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Откройте самые большие скидки"
+          }
+        }
+      }
+    },
+    "Ərazidəki kampaniyalar" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ərazidəki kampaniyalar"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Campaigns in this area"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Акции в этой области"
+          }
+        }
+      }
+    },
+    "Əyləncə" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Əyləncə"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entertainment"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Развлечения"
+          }
+        }
+      }
+    },
+    "Fürsətləri kəşf et" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fürsətləri kəşf et"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Discover offers"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Откройте предложения"
+          }
+        }
+      }
+    },
+    "Gecən xeyrə" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gecən xeyrə"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Good night"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доброй ночи"
+          }
+        }
+      }
+    },
+    "Giriş" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giriş"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign in"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вход"
+          }
+        }
+      }
+    },
+    "Görünüş" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Görünüş"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appearance"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оформление"
+          }
+        }
+      }
+    },
+    "Gözəllik" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gözəllik"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beauty"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Красота"
+          }
+        }
+      }
+    },
+    "Günortan xeyir" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Günortan xeyir"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Good afternoon"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добрый день"
+          }
+        }
+      }
+    },
+    "Gününə dəyər qatan təkliflər." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gününə dəyər qatan təkliflər."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Offers that make your day better."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предложения, которые сделают ваш день лучше."
+          }
+        }
+      }
+    },
+    "Hamısı" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hamısı"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See all"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Все"
+          }
+        }
+      }
+    },
+    "Hesab" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesab"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Account"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Аккаунт"
+          }
+        }
+      }
+    },
+    "Hesab növləri" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesab növləri"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Account types"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Типы аккаунтов"
+          }
+        }
+      }
+    },
+    "Hesab növü" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesab növü"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Account type"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тип аккаунта"
+          }
+        }
+      }
+    },
+    "Hesab təhlükəsizliyi" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesab təhlükəsizliyi"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Account security"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Безопасность аккаунта"
+          }
+        }
+      }
+    },
+    "Hesabdan çıx" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabdan çıx"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Log out"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выйти"
+          }
+        }
+      }
+    },
+    "Hesabdan çıxmaq istəyirsən?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabdan çıxmaq istəyirsən?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Log out of your account?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выйти из аккаунта?"
+          }
+        }
+      }
+    },
+    "Hesabı saxla" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabı saxla"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keep account"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранить аккаунт"
+          }
+        }
+      }
+    },
+    "Hesabı sil" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabı sil"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete account"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить аккаунт"
+          }
+        }
+      }
+    },
+    "Hesabım" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabım"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My account"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мой аккаунт"
+          }
+        }
+      }
+    },
+    "Hesabım var." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabım var."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I already have an account."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "У меня уже есть аккаунт."
+          }
+        }
+      }
+    },
+    "Hesabın silinməsi" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabın silinməsi"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Account deletion"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удаление аккаунта"
+          }
+        }
+      }
+    },
+    "Hesabın və ona bağlı məlumatlar birdəfəlik silinəcək." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabın və ona bağlı məlumatlar birdəfəlik silinəcək."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your account and associated data will be permanently deleted."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваш аккаунт и связанные с ним данные будут удалены безвозвратно."
+          }
+        }
+      }
+    },
+    "Hesabın yoxdur?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabın yoxdur?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Don’t have an account?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет аккаунта?"
+          }
+        }
+      }
+    },
+    "Hesabındakı məkanın 5 km ətrafı" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabındakı məkanın 5 km ətrafı"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Within 5 km of your saved location"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В радиусе 5 км от сохранённого местоположения"
+          }
+        }
+      }
+    },
+    "Hesabındakı məkanın 5 km ətrafında" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabındakı məkanın 5 km ətrafında"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Within 5 km of your saved location"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В радиусе 5 км от сохранённого местоположения"
+          }
+        }
+      }
+    },
+    "Hesabını silmək istəyirsən?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabını silmək istəyirsən?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete your account?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить аккаунт?"
+          }
+        }
+      }
+    },
+    "Hesabını silmək üçün Profil → Ayarlar → Hesabı sil keçidindən istifadə et. Silməzdən əvvəl təsdiq tələb olunur və bu əməliyyat geri qaytarılmır." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesabını silmək üçün Profil → Ayarlar → Hesabı sil keçidindən istifadə et. Silməzdən əvvəl təsdiq tələb olunur və bu əməliyyat geri qaytarılmır."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To delete your account, go to Profile → Settings → Delete account. Confirmation is required, and deletion cannot be undone."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Для удаления аккаунта откройте Профиль → Настройки → Удалить аккаунт. Требуется подтверждение. Удаление нельзя отменить."
+          }
+        }
+      }
+    },
+    "Hələ seçilmiş təklif yoxdur" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hələ seçilmiş təklif yoxdur"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No favorite offers yet"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пока нет избранных предложений"
+          }
+        }
+      }
+    },
+    "Hər gün yeni fürsətlər" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hər gün yeni fürsətlər"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New offers every day"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Новые предложения каждый день"
+          }
+        }
+      }
+    },
+    "İdman" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İdman"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sports"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Спорт"
+          }
+        }
+      }
+    },
+    "İstifadə qaydaları" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İstifadə qaydaları"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms of use"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Правила использования"
+          }
+        }
+      }
+    },
+    "İstifadə şərtləri" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İstifadə şərtləri"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms and conditions"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Условия использования"
+          }
+        }
+      }
+    },
+    "Kampaniya" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kampaniya"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Campaign"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Акция"
+          }
+        }
+      }
+    },
+    "Kampaniya haqqında" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kampaniya haqqında"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About this campaign"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Об акции"
+          }
+        }
+      }
+    },
+    "Kampaniya kartındakı seçilmişlər düyməsinə toxun. Saxladığın təklifləri Seçilmişlər səhifəsində tapa bilərsən. Bu funksiya şəxsi hesablar üçün mövcuddur." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kampaniya kartındakı seçilmişlər düyməsinə toxun. Saxladığın təklifləri Seçilmişlər səhifəsində tapa bilərsən. Bu funksiya şəxsi hesablar üçün mövcuddur."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap the favorite button on a campaign card. Find saved offers on the Favorites page. This feature is available for personal accounts."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите кнопку избранного на карточке акции. Сохранённые предложения находятся на странице «Избранное». Функция доступна для личных аккаунтов."
+          }
+        }
+      }
+    },
+    "Kampaniya tapılmadı" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kampaniya tapılmadı"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No campaigns found"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Акции не найдены"
+          }
+        }
+      }
+    },
+    "Kampaniya və ya marka" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kampaniya və ya marka"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Campaign or brand"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Акция или бренд"
+          }
+        }
+      }
+    },
+    "Kampaniyalara siyahıda bax" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kampaniyalara siyahıda bax"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View campaigns as a list"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Посмотреть список акций"
+          }
+        }
+      }
+    },
+    "Kampaniyalardan istifadə" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kampaniyalardan istifadə"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Using campaigns"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Использование акций"
+          }
+        }
+      }
+    },
+    "Kampaniyanı açaraq endirim məbləğini, bitmə tarixini, ünvanını və istifadə şərtlərini yoxla. Əlavə suallar üçün kampaniyanı təqdim edən biznesə müraciət et." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kampaniyanı açaraq endirim məbləğini, bitmə tarixini, ünvanını və istifadə şərtlərini yoxla. Əlavə suallar üçün kampaniyanı təqdim edən biznesə müraciət et."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open the campaign to check the discount, end date, address and conditions. Contact the business offering the campaign for additional questions."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Откройте акцию, чтобы проверить размер скидки, дату окончания, адрес и условия. За дополнительной информацией обратитесь в компанию, предлагающую акцию."
+          }
+        }
+      }
+    },
+    "Kampaniyanı necə yadda saxlayım?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kampaniyanı necə yadda saxlayım?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "How do I save a campaign?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как сохранить акцию?"
+          }
+        }
+      }
+    },
+    "Kampaniyanın detallarına bax" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kampaniyanın detallarına bax"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View campaign details"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подробности акции"
+          }
+        }
+      }
+    },
+    "Kampaniyanın müddətini, ünvanını və şərtlərini detallarda yoxla. Endirim barədə əlavə məlumat üçün kampaniyanı təqdim edən biznesə müraciət et." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kampaniyanın müddətini, ünvanını və şərtlərini detallarda yoxla. Endirim barədə əlavə məlumat üçün kampaniyanı təqdim edən biznesə müraciət et."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check the dates, address and conditions in the campaign details. For more information about a discount, contact the business offering it."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Проверьте срок действия, адрес и условия в описании акции. За подробностями о скидке обратитесь в компанию, которая её предлагает."
+          }
+        }
+      }
+    },
+    "Kateqoriya" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kateqoriya"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Category"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Категория"
+          }
+        }
+      }
+    },
+    "Keç" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keç"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skip"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пропустить"
+          }
+        }
+      }
+    },
+    "KƏŞF ET" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "KƏŞF ET"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DISCOVER"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ОТКРЫВАЙТЕ"
+          }
+        }
+      }
+    },
+    "Kəşf hesabınla fürsətlər bir addım yaxındadır." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kəşf hesabınla fürsətlər bir addım yaxındadır."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your account brings offers one step closer."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "С вашим аккаунтом предложения на шаг ближе."
+          }
+        }
+      }
+    },
+    "Kömək və dəstək" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kömək və dəstək"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Help & support"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Помощь и поддержка"
+          }
+        }
+      }
+    },
+    "Küçə və bina" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Küçə və bina"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Street and building"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Улица и дом"
+          }
+        }
+      }
+    },
+    "Ləğv et" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ləğv et"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отмена"
+          }
+        }
+      }
+    },
+    "Loqo linki" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loqo linki"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Logo URL"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ссылка на логотип"
+          }
+        }
+      }
+    },
+    "Maraqlar və seçilmişlər sənə uyğun təklifləri tapmağa kömək edir. Dil və görünüş seçimin cihazda yadda saxlanır; bildiriş seçimlərini Ayarlardan dəyişə bilərsən." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maraqlar və seçilmişlər sənə uyğun təklifləri tapmağa kömək edir. Dil və görünüş seçimin cihazda yadda saxlanır; bildiriş seçimlərini Ayarlardan dəyişə bilərsən."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Interests and favorites help you find relevant offers. Your language and appearance are saved on your device; change notification preferences in Settings."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Интересы и избранное помогают находить подходящие предложения. Язык и оформление сохраняются на устройстве; параметры уведомлений можно изменить в настройках."
+          }
+        }
+      }
+    },
+    "Maraqlarım" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maraqlarım"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My interests"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мои интересы"
+          }
+        }
+      }
+    },
+    "Maraqlarıma uyğun təkliflər" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maraqlarıma uyğun təkliflər"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Offers matching my interests"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предложения по моим интересам"
+          }
+        }
+      }
+    },
+    "Maraqların yeniləndi." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maraqların yeniləndi."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your interests have been updated."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваши интересы обновлены."
+          }
+        }
+      }
+    },
+    "Maraqlarına uyğun təkliflər" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maraqlarına uyğun təkliflər"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Offers for your interests"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предложения по вашим интересам"
+          }
+        }
+      }
+    },
+    "Market" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Market"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Groceries"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Продукты"
+          }
+        }
+      }
+    },
+    "Məkan" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Məkan"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Location"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Местоположение"
+          }
+        }
+      }
+    },
+    "Məkan əlçatan deyil" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Məkan əlçatan deyil"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Location unavailable"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Местоположение недоступно"
+          }
+        }
+      }
+    },
+    "Məkan icazəsi" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Məkan icazəsi"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Location permission"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доступ к геолокации"
+          }
+        }
+      }
+    },
+    "Məkan icazəsi bağlıdır" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Məkan icazəsi bağlıdır"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Location permission is disabled"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доступ к геолокации отключён"
+          }
+        }
+      }
+    },
+    "Məkan icazəsi gözlənilir…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Məkan icazəsi gözlənilir…"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waiting for location permission…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ожидание разрешения на геолокацию…"
+          }
+        }
+      }
+    },
+    "Məkan müəyyən edilir…" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Məkan müəyyən edilir…"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finding your location…"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Определение местоположения…"
+          }
+        }
+      }
+    },
+    "Məkan müəyyən edilmədi" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Məkan müəyyən edilmədi"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Location could not be determined"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось определить местоположение"
+          }
+        }
+      }
+    },
+    "Məkan seçmək üçün xəritəyə toxun." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Məkan seçmək üçün xəritəyə toxun."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap the map to select a location."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите на карту, чтобы выбрать место."
+          }
+        }
+      }
+    },
+    "Məkan və ya ünvan axtar" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Məkan və ya ünvan axtar"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search for a place or address"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поиск места или адреса"
+          }
+        }
+      }
+    },
+    "Məkanı yenidən yoxla" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Məkanı yenidən yoxla"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check location again"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Проверить местоположение снова"
+          }
+        }
+      }
+    },
+    "Məkanımı göstər və kampaniyaları yenilə" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Məkanımı göstər və kampaniyaları yenilə"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show my location and refresh campaigns"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показать моё местоположение и обновить акции"
+          }
+        }
+      }
+    },
+    "Məkanın ana səhifədə olduğun ərazini və xəritədə yaxınlıqdakı kampaniyaları göstərmək üçün istifadə olunur. İcazəni cihazın ayarlarından idarə edə bilərsən." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Məkanın ana səhifədə olduğun ərazini və xəritədə yaxınlıqdakı kampaniyaları göstərmək üçün istifadə olunur. İcazəni cihazın ayarlarından idarə edə bilərsən."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your location is used to show your area on the home page and nearby campaigns on the map. Manage permission in your device settings."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Местоположение используется для отображения вашего района на главной странице и акций рядом на карте. Управляйте разрешением в настройках устройства."
+          }
+        }
+      }
+    },
+    "Məkanını seç, ətrafındakı kampaniyalara bax və bəyəndiyin yerə yolunu tap." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Məkanını seç, ətrafındakı kampaniyalara bax və bəyəndiyin yerə yolunu tap."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose your location, explore nearby campaigns and find your way to places you like."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите местоположение, найдите акции рядом и проложите маршрут."
+          }
+        }
+      }
+    },
+    "Məxfilik" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Məxfilik"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Privacy"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Конфиденциальность"
+          }
+        }
+      }
+    },
+    "Moda" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moda"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fashion"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мода"
+          }
+        }
+      }
+    },
+    "Moda, gözəllik, yemək və daha çoxu. Müxtəlif məkanların endirimlərini bir yerdə kəşf et." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moda, gözəllik, yemək və daha çoxu. Müxtəlif məkanların endirimlərini bir yerdə kəşf et."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fashion, beauty, food and more. Discover discounts from different places in one app."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мода, красота, еда и многое другое. Находите скидки разных заведений в одном приложении."
+          }
+        }
+      }
+    },
+    "Network Debug" : {
+
+    },
+    "Olduğun məkanın ətrafında" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Olduğun məkanın ətrafında"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Near your location"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рядом с вами"
+          }
+        }
+      }
+    },
+    "Ön sıradakı fürsətlər" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ön sıradakı fürsətlər"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Featured offers"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рекомендуемые предложения"
+          }
+        }
+      }
+    },
+    "Premium kampaniya" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium kampaniya"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Premium campaign"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Премиум-акция"
+          }
+        }
+      }
+    },
+    "Profil" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profile"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Профиль"
+          }
+        }
+      }
+    },
+    "Profil məlumatları" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil məlumatları"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profile information"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Данные профиля"
+          }
+        }
+      }
+    },
+    "Profil məlumatları saxlanıldı." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil məlumatları saxlanıldı."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profile details saved."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Данные профиля сохранены."
+          }
+        }
+      }
+    },
+    "Profil məlumatlarını yükləmək mümkün olmadı." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil məlumatlarını yükləmək mümkün olmadı."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your profile could not be loaded."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось загрузить профиль."
+          }
+        }
+      }
+    },
+    "Profilim" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profilim"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My profile"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мой профиль"
+          }
+        }
+      }
+    },
+    "Profilin, seçilmişlərin və şəxsi seçimlərin birdəfəlik silinəcək. Bu əməliyyatı geri qaytarmaq mümkün deyil." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profilin, seçilmişlərin və şəxsi seçimlərin birdəfəlik silinəcək. Bu əməliyyatı geri qaytarmaq mümkün deyil."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your profile, favorites and preferences will be permanently deleted. This cannot be undone."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваш профиль, избранное и личные настройки будут удалены безвозвратно. Это действие нельзя отменить."
+          }
+        }
+      }
+    },
+    "Qaydalar və məxfilik" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Qaydalar və məxfilik"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terms & policies"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Условия и конфиденциальность"
+          }
+        }
+      }
+    },
+    "Qeydiyyat" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Qeydiyyat"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registration"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Регистрация"
+          }
+        }
+      }
+    },
+    "Qeydiyyatdan keç" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Qeydiyyatdan keç"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign up"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зарегистрироваться"
+          }
+        }
+      }
+    },
+    "Sabahın xeyir" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sabahın xeyir"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Good morning"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доброе утро"
+          }
+        }
+      }
+    },
+    "Seçdiyin kateqoriyalarda yeni kampaniyalar." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seçdiyin kateqoriyalarda yeni kampaniyalar."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New campaigns in your selected categories."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Новые акции в выбранных категориях."
+          }
+        }
+      }
+    },
+    "Seçdiyin məkanın ətrafında" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seçdiyin məkanın ətrafında"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Near your selected location"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рядом с выбранным местом"
+          }
+        }
+      }
+    },
+    "Seçilən məkan" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seçilən məkan"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selected location"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбранное место"
+          }
+        }
+      }
+    },
+    "Seçilib" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seçilib"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selected"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрано"
+          }
+        }
+      }
+    },
+    "Seçilməyib" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seçilməyib"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not selected"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не выбрано"
+          }
+        }
+      }
+    },
+    "Seçilmiş kateqoriya" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seçilmiş kateqoriya"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selected category"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбранная категория"
+          }
+        }
+      }
+    },
+    "Seçilmiş təklif" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seçilmiş təklif"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favorite offer"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Избранное предложение"
+          }
+        }
+      }
+    },
+    "Seçilmişlər" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seçilmişlər"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favorites"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Избранное"
+          }
+        }
+      }
+    },
+    "Seçilmişlər yenilənmədi" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seçilmişlər yenilənmədi"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favorites could not be updated"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось обновить избранное"
+          }
+        }
+      }
+    },
+    "Seçilmişlərdə yeniliklər" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seçilmişlərdə yeniliklər"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favorite updates"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Обновления избранного"
+          }
+        }
+      }
+    },
+    "Seçilmişlərdən çıxar" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seçilmişlərdən çıxar"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remove from favorites"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить из избранного"
+          }
+        }
+      }
+    },
+    "Seçilmişlərə əlavə et" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seçilmişlərə əlavə et"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add to favorites"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить в избранное"
+          }
+        }
+      }
+    },
+    "Seçilmişlərə əlavə etmək şəxsi hesablar üçün mövcuddur." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seçilmişlərə əlavə etmək şəxsi hesablar üçün mövcuddur."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saving favorites is available for personal accounts."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавление в избранное доступно для личных аккаунтов."
+          }
+        }
+      }
+    },
+    "Seçilmişlərim" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seçilmişlərim"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My favorites"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Моё избранное"
+          }
+        }
+      }
+    },
+    "Sevdiklərin bir yerdə" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sevdiklərin bir yerdə"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your favorites in one place"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Всё любимое в одном месте"
+          }
+        }
+      }
+    },
+    "Sevdiyin yerlər.\nDaha sərfəli təkliflər." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sevdiyin yerlər.\nDaha sərfəli təkliflər."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Places you love.\nBetter offers."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Любимые места.\nВыгодные предложения."
+          }
+        }
+      }
+    },
+    "Səhifə %lld, cəmi %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Səhifə %1$lld, cəmi %2$lld"
+          }
+        }
+      }
+    },
+    "Sənə uyğun təklifləri seçməyimiz üçün maraq kateqoriyalarını qeyd et." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sənə uyğun təklifləri seçməyimiz üçün maraq kateqoriyalarını qeyd et."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose your interests to get relevant offers."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите интересы, чтобы получать подходящие предложения."
+          }
+        }
+      }
+    },
+    "SƏNİN ÜÇÜN" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SƏNİN ÜÇÜN"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "FOR YOU"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ДЛЯ ВАС"
+          }
+        }
+      }
+    },
+    "Şəxsi" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şəxsi"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personal"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Личный"
+          }
+        }
+      }
+    },
+    "Şəxsi hesab" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şəxsi hesab"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personal account"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Личный аккаунт"
+          }
+        }
+      }
+    },
+    "ŞƏXSİ HESAB" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ŞƏXSİ HESAB"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PERSONAL ACCOUNT"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ЛИЧНЫЙ АККАУНТ"
+          }
+        }
+      }
+    },
+    "Şəxsi hesabda kampaniyaları seçilmişlərə əlavə edə, maraqlarını və bildiriş seçimlərini idarə edə bilərsən. Biznes hesabında biznes məlumatlarını yeniləyə bilərsən." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şəxsi hesabda kampaniyaları seçilmişlərə əlavə edə, maraqlarını və bildiriş seçimlərini idarə edə bilərsən. Biznes hesabında biznes məlumatlarını yeniləyə bilərsən."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "With a personal account, save campaigns to favorites and manage your interests and notifications. With a business account, update your business details."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В личном аккаунте можно сохранять акции в избранное и управлять интересами и уведомлениями. В бизнес-аккаунте можно обновлять данные бизнеса."
+          }
+        }
+      }
+    },
+    "Şəxsi məlumatlar" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şəxsi məlumatlar"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personal details"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Личные данные"
+          }
+        }
+      }
+    },
+    "Şəxsi seçimlər" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şəxsi seçimlər"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personal preferences"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Личные настройки"
+          }
+        }
+      }
+    },
+    "Səyahət" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Səyahət"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Travel"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Путешествия"
+          }
+        }
+      }
+    },
+    "Şifrə" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifrə"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пароль"
+          }
+        }
+      }
+    },
+    "Şifrə bərpası" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifrə bərpası"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password recovery"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Восстановление пароля"
+          }
+        }
+      }
+    },
+    "Şifrə bərpası səhifəsində hesabının e-poçtunu daxil et. Göndərilən bərpa linki ilə yeni şifrə təyin edə bilərsən." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifrə bərpası səhifəsində hesabının e-poçtunu daxil et. Göndərilən bərpa linki ilə yeni şifrə təyin edə bilərsən."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter your account email on the Password recovery page. Use the reset link to set a new password."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите электронную почту аккаунта на странице восстановления пароля. По ссылке восстановления можно установить новый пароль."
+          }
+        }
+      }
+    },
+    "Şifrə daxil edin" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifrə daxil edin"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter your password"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите пароль"
+          }
+        }
+      }
+    },
+    "Şifrə ən azı 6 simvol olmalıdır." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifrə ən azı 6 simvol olmalıdır."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Password must contain at least 6 characters."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пароль должен содержать не менее 6 символов."
+          }
+        }
+      }
+    },
+    "Şifrəmi unutmuşam, nə edim?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifrəmi unutmuşam, nə edim?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I forgot my password. What should I do?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Я забыл пароль. Что делать?"
+          }
+        }
+      }
+    },
+    "Şifrəni başqaları ilə paylaşma. Şifrəni unutduqda e-poçt ünvanınla bərpa linki istəyə bilərsən." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifrəni başqaları ilə paylaşma. Şifrəni unutduqda e-poçt ünvanınla bərpa linki istəyə bilərsən."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do not share your password. If you forget it, request a reset link using your email address."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не сообщайте свой пароль другим. Если вы его забыли, запросите ссылку для восстановления по электронной почте."
+          }
+        }
+      }
+    },
+    "Şifrəni gizlət" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifrəni gizlət"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hide password"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скрыть пароль"
+          }
+        }
+      }
+    },
+    "Şifrəni göstər" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifrəni göstər"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show password"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показать пароль"
+          }
+        }
+      }
+    },
+    "Şifrəni unutdum" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifrəni unutdum"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forgot password"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Забыли пароль"
+          }
+        }
+      }
+    },
+    "Şifrəni yenilə" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifrəni yenilə"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset password"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сбросить пароль"
+          }
+        }
+      }
+    },
+    "Şifrənizi yeniləmək üçün email daxil edin." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifrənizi yeniləmək üçün email daxil edin."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter your email to reset your password."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Введите электронную почту для сброса пароля."
+          }
+        }
+      }
+    },
+    "Şifrənizi yeniləyin" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şifrənizi yeniləyin"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset your password"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сбросьте пароль"
+          }
+        }
+      }
+    },
+    "Sistem" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sistem"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "System"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Системное"
+          }
+        }
+      }
+    },
+    "Sistem seçimi cihazın görünüş ayarına uyğunlaşır." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sistem seçimi cihazın görünüş ayarına uyğunlaşır."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "System follows your device’s appearance."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Системное оформление соответствует настройкам устройства."
+          }
+        }
+      }
+    },
+    "Sıfırla" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sıfırla"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сбросить"
+          }
+        }
+      }
+    },
+    "Sıralama" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sıralama"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sort by"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сортировка"
+          }
+        }
+      }
+    },
+    "Son fürsəti qaçırma" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Son fürsəti qaçırma"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last chance"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Последний шанс"
+          }
+        }
+      }
+    },
+    "Tanıtımı keç" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tanıtımı keç"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skip introduction"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пропустить знакомство"
+          }
+        }
+      }
+    },
+    "Telefon" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Telefon"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phone"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Телефон"
+          }
+        }
+      }
+    },
+    "Tez-tez verilən suallar və faydalı keçidlər." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tez-tez verilən suallar və faydalı keçidlər."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frequently asked questions and useful links."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Частые вопросы и полезные ссылки."
+          }
+        }
+      }
+    },
+    "Təklif tapılmadı" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Təklif tapılmadı"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No offers found"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предложения не найдены"
+          }
+        }
+      }
+    },
+    "Təklifləri kəşf et" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Təklifləri kəşf et"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Explore offers"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Посмотреть предложения"
+          }
+        }
+      }
+    },
+    "Təklifləri seçilmişlərinə əlavə et. Maraqlarını seçərək sənə uyğun kampaniyaları kəşf et." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Təklifləri seçilmişlərinə əlavə et. Maraqlarını seçərək sənə uyğun kampaniyaları kəşf et."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save offers to favorites. Choose your interests to discover relevant campaigns."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохраняйте предложения в избранное. Выберите интересы, чтобы находить подходящие акции."
+          }
+        }
+      }
+    },
+    "Tətbiq" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tətbiq"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Приложение"
+          }
+        }
+      }
+    },
+    "Tətbiqdən istifadə və məlumatların idarəsi haqqında." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tətbiqdən istifadə və məlumatların idarəsi haqqında."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About using the app and managing your information."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Об использовании приложения и управлении вашими данными."
+          }
+        }
+      }
+    },
+    "Təyinatı sil" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Təyinatı sil"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Remove destination"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить пункт назначения"
+          }
+        }
+      }
+    },
+    "Təzə-təzə gəldi" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Təzə-təzə gəldi"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Just added"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Только что добавлено"
+          }
+        }
+      }
+    },
+    "Tünd" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tünd"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dark"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Тёмное"
+          }
+        }
+      }
+    },
+    "Ünvan" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ünvan"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Address"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Адрес"
+          }
+        }
+      }
+    },
+    "Xəritə" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xəritə"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Map"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Карта"
+          }
+        }
+      }
+    },
+    "Xəritədə görünən %lld kampaniya" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xəritədə görünən %lld kampaniya"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld campaigns on the map"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld акций на карте"
+          }
+        }
+      }
+    },
+    "Xəritədə göstər" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xəritədə göstər"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show on map"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показать на карте"
+          }
+        }
+      }
+    },
+    "Xəritədə məkan icazəsini yoxla və kampaniyaları yenilə. Məkan icazəsi vermədən də xəritəyə toxunaraq başqa ərazi seçə bilərsən." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xəritədə məkan icazəsini yoxla və kampaniyaları yenilə. Məkan icazəsi vermədən də xəritəyə toxunaraq başqa ərazi seçə bilərsən."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check location permission on the map and refresh campaigns. You can also tap the map to choose another area without granting location permission."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Проверьте разрешение на геолокацию и обновите акции на карте. Можно выбрать другую область нажатием на карту без разрешения на геолокацию."
+          }
+        }
+      }
+    },
+    "Xəritədə seçdiyin təyinat" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xəritədə seçdiyin təyinat"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your selected map destination"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбранный пункт назначения"
+          }
+        }
+      }
+    },
+    "Xəritəni uzaqlaşdır" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xəritəni uzaqlaşdır"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zoom out"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отдалить карту"
+          }
+        }
+      }
+    },
+    "Xəritəni yaxınlaşdır" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xəritəni yaxınlaşdır"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zoom in"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Приблизить карту"
+          }
+        }
+      }
+    },
+    "Xəritənin görünən hissəsində kampaniya yoxdur. Başqa kampaniyaları görmək üçün xəritəni sürüşdür və ya uzaqlaşdır." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xəritənin görünən hissəsində kampaniya yoxdur. Başqa kampaniyaları görmək üçün xəritəni sürüşdür və ya uzaqlaşdır."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No campaigns in the visible area. Move or zoom out to see more."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В видимой области нет акций. Переместите карту или уменьшите масштаб."
+          }
+        }
+      }
+    },
+    "Xəta baş verdi" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xəta baş verdi"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Something went wrong"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Произошла ошибка"
+          }
+        }
+      }
+    },
+    "Xüsusi PRO təklifləri" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xüsusi PRO təklifləri"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exclusive PRO offers"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Особые PRO-предложения"
+          }
+        }
+      }
+    },
+    "Xüsusi təklif" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Xüsusi təklif"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Special offer"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Особое предложение"
+          }
+        }
+      }
+    },
+    "Yalnız PRO təkliflər" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yalnız PRO təkliflər"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "PRO offers only"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Только PRO-предложения"
+          }
+        }
+      }
+    },
+    "YAXINLIĞINDA" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "YAXINLIĞINDA"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "NEARBY"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "РЯДОМ"
+          }
+        }
+      }
+    },
+    "Yaxındakı fürsətləri\nqaçırma." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yaxındakı fürsətləri\nqaçırma."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Don’t miss\nnearby offers."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не пропустите\nпредложения рядом."
+          }
+        }
+      }
+    },
+    "Yaxınlıq radiusu" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yaxınlıq radiusu"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nearby radius"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Радиус поиска"
+          }
+        }
+      }
+    },
+    "Yaxınlıq radiusu 0-dan böyük və ən çox 500 km olmalıdır." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yaxınlıq radiusu 0-dan böyük və ən çox 500 km olmalıdır."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The nearby radius must be greater than 0 and at most 500 km."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Радиус поиска должен быть больше 0 и не превышать 500 км."
+          }
+        }
+      }
+    },
+    "Yaxınlıq, maraqlar və seçilmişlər" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yaxınlıq, maraqlar və seçilmişlər"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nearby offers, interests and favorites"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предложения рядом, интересы и избранное"
+          }
+        }
+      }
+    },
+    "Yaxınlıqdakı kampaniyalar" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yaxınlıqdakı kampaniyalar"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nearby campaigns"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Акции рядом"
+          }
+        }
+      }
+    },
+    "Yaxınlıqdakı təkliflər" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yaxınlıqdakı təkliflər"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nearby offers"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предложения рядом"
+          }
+        }
+      }
+    },
+    "Yaxınlıqdakı təkliflər görünmür?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yaxınlıqdakı təkliflər görünmür?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Why can’t I see nearby offers?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Почему не отображаются предложения рядом?"
+          }
+        }
+      }
+    },
+    "Yaxınlıqdakı yeni təkliflər." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yaxınlıqdakı yeni təkliflər."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New offers near you."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Новые предложения рядом с вами."
+          }
+        }
+      }
+    },
+    "Yemək və içki" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yemək və içki"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Food and drink"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Еда и напитки"
+          }
+        }
+      }
+    },
+    "Yeni fürsətlərə salam de." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeni fürsətlərə salam de."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Say hello to new opportunities."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Откройте новые возможности."
+          }
+        }
+      }
+    },
+    "Yeni sevimlilərini kəşf et" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeni sevimlilərini kəşf et"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Discover new favorites"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Откройте новые любимые места"
+          }
+        }
+      }
+    },
+    "Yeni şifrə" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeni şifrə"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New password"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Новый пароль"
+          }
+        }
+      }
+    },
+    "Yenidən cəhd et" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yenidən cəhd et"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try again"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Попробовать снова"
+          }
+        }
+      }
+    },
+    "Yenilənən və bitmək üzrə olan seçilmiş təkliflər." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yenilənən və bitmək üzrə olan seçilmiş təkliflər."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Updates and reminders for favorite offers ending soon."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Обновления избранных предложений и напоминания об их завершении."
+          }
+        }
+      }
+    },
+    "Yol tarifi al" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yol tarifi al"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Get directions"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Построить маршрут"
+          }
+        }
+      }
+    },
+    "Yüklənir" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "az" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yüklənir"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Загрузка"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

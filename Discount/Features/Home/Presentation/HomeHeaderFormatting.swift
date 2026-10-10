@@ -12,13 +12,13 @@ nonisolated enum HomeHeaderFormatting {
         let salutation: String
         switch calendar.component(.hour, from: date) {
         case 5 ..< 12:
-            salutation = "Sabahın xeyir"
+            salutation = AppLocalization.string("Sabahın xeyir")
         case 12 ..< 17:
-            salutation = "Günortan xeyir"
+            salutation = AppLocalization.string("Günortan xeyir")
         case 17 ..< 22:
-            salutation = "Axşamın xeyir"
+            salutation = AppLocalization.string("Axşamın xeyir")
         default:
-            salutation = "Gecən xeyrə"
+            salutation = AppLocalization.string("Gecən xeyrə")
         }
         guard let firstName = name?.split(whereSeparator: { $0.isWhitespace }).first else {
             return "\(salutation) 👋"

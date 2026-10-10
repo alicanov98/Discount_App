@@ -24,7 +24,7 @@ private struct SuccessToastModifier: ViewModifier {
                     HStack(alignment: .top, spacing: AppSpacing.sm) {
                         Image(systemName: "checkmark.circle.fill")
                             .accessibilityHidden(true)
-                        Text(message)
+                        Text(LocalizedStringKey(message))
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .fixedSize(horizontal: false, vertical: true)
                         Button {

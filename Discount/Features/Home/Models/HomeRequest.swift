@@ -17,9 +17,9 @@ enum CampaignSort: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .newest: "Ən yenilər"
-        case .highestDiscount: "Ən yüksək endirim"
-        case .endingSoon: "Bitmək üzrə"
+        case .newest: AppLocalization.string("Ən yenilər")
+        case .highestDiscount: AppLocalization.string("Ən yüksək endirim")
+        case .endingSoon: AppLocalization.string("Bitmək üzrə")
         }
     }
 }

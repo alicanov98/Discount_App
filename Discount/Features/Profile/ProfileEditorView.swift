@@ -24,8 +24,11 @@ struct ProfileEditorView: View {
         self.viewModel = viewModel
         self.section = section
 
-        _draft = State(initialValue: viewModel.draft)
-        _savedDraft = State(initialValue: viewModel.draft)
+        let initialDraft = section == .notifications
+            ? viewModel.user.map { ProfileDraft(user: $0) } ?? viewModel.draft
+            : viewModel.draft
+        _draft = State(initialValue: initialDraft)
+        _savedDraft = State(initialValue: initialDraft)
 
         let interests = Set(viewModel.user?.interests ?? [])
 
@@ -60,7 +63,7 @@ struct ProfileEditorView: View {
         }
         .scrollDismissesKeyboard(.interactively)
         .background(Color.appBackground)
-        .navigationTitle(section.title(isBusiness: viewModel.isBusiness))
+        .navigationTitle(Text(LocalizedStringKey(section.title(isBusiness: viewModel.isBusiness))))
         .navigationBarTitleDisplayMode(.inline)
         .tint(Color.appPrimary)
         .successToast(message: $viewModel.successMessage)
@@ -79,10 +82,9 @@ struct ProfileEditorView: View {
                 viewModel.errorMessage = nil
             }
         } message: {
-            Text(
-                viewModel.errorMessage
-                    ?? "Dəyişiklikləri saxlamaq mümkün olmadı."
-            )
+            Text(LocalizedStringKey(
+                viewModel.errorMessage ?? "Dəyişiklikləri saxlamaq mümkün olmadı."
+            ))
         }
     }
 
@@ -102,7 +104,9 @@ struct ProfileEditorView: View {
             section: section,
             editedDraft: draft
         ) {
-            draft = viewModel.draft
+            draft = section == .notifications
+                ? viewModel.user.map { ProfileDraft(user: $0) } ?? viewModel.draft
+                : viewModel.draft
             savedDraft = draft
         }
     }
@@ -311,11 +315,11 @@ struct ProfileEditorView: View {
     ) -> some View {
         Toggle(isOn: value) {
             VStack(alignment: .leading, spacing: 5) {
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .font(AppTypography.body)
                     .foregroundStyle(Color.appTextPrimary)
 
-                Text(description)
+                Text(LocalizedStringKey(description))
                     .font(AppTypography.caption)
                     .foregroundStyle(Color.appTextSecondary)
             }
@@ -330,12 +334,12 @@ struct ProfileEditorView: View {
         placeholder: String = ""
     ) -> some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(label)
+            Text(LocalizedStringKey(label))
                 .font(AppTypography.caption)
                 .foregroundStyle(Color.appTextSecondary)
 
             TextField(
-                placeholder.isEmpty ? label : placeholder,
+                LocalizedStringKey(placeholder.isEmpty ? label : placeholder),
                 text: text
             )
             .font(AppTypography.body)
@@ -361,7 +365,7 @@ struct ProfileEditorView: View {
         @ViewBuilder content: () -> Content
     ) -> some View {
         VStack(alignment: .leading, spacing: 16) {
-            Label(title, systemImage: symbol)
+            Label(LocalizedStringKey(title), systemImage: symbol)
                 .font(AppTypography.sectionTitle)
                 .foregroundStyle(Color.appTextPrimary)
 
